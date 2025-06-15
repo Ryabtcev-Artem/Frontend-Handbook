@@ -1,54 +1,25 @@
-# React + TypeScript + Vite
+# Frontend Handbook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[https://frontend-handbook-one.vercel.app/](https://frontend-handbook-one.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Описание
 
-## Expanding the ESLint configuration
+Frontend Handbook — это сайт, посвящённый фундаментальным принципам веб-разработки. Это не просто справочник по свойствам CSS или методам JavaScript, а объяснение ключевых концепций, которые помогут понять, как устроена работа веба изнутри.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Проект рассчитан на тех, кто хочет не просто использовать технологии, а осознавать их внутренние механизмы — от работы интернета и браузеров до основ HTML, CSS и JavaScript.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Для кого этот проект
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Новички, желающие получить базовые знания о веб-разработке.
+- Разработчики, стремящиеся укрепить свои фундаментальные знания.
+- Все, кто хочет понять «почему» и «как» работают современные веб-технологии.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## Ссылка на проект
+
+[https://frontend-handbook-one.vercel.app/](https://frontend-handbook-one.vercel.app/)
