@@ -1,0 +1,78 @@
+@use "../../mixins" as *;
+.test{
+  &__title{
+    text-decoration: underline;
+  }
+  &__task{
+    background-color: var(--task-color);
+    border: 1px solid var(--headers-color);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  &__explanation{
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    border: var(--border-2);
+    padding: 10px;
+    display: none;
+    &.active{
+      display: flex;
+    }
+  }
+  &__interaction{
+    display: flex;
+    width: 100%;
+    column-gap: 10px;
+    overflow: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 6px;
+    border-radius: 4px;
+    transition-duration: .2s;
+    &.correct{
+      background-color: var(--commentary-color);
+    }
+    &.wrong{
+      background-color: var(--accent-color-2);
+    }
+    &:first-child{
+      margin-top: 8px;
+    }
+  }
+  &__variant{
+    color: var(--headers-color);
+    &-text{
+      display: flex;
+      width: 100%;
+      overflow: auto;
+    }
+  }
+  &__hide{
+    cursor: pointer;
+    background-color: var(--task-color);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__label{
+    cursor: pointer;
+  }
+  &__radio{
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  &__check{
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../mixins" as *;
+.chapter{
+  &__topic{
+    list-style: none;
+    display: flex;
+    &-id{
+      font-family: Consolas;
+      margin-right: 10px;
+    }
+  }
+  &__blocks{
+    &:last-child{
+      margin-bottom: 60px;
+    }
+  }
+  &__block{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include tablet{
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include mobile{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+}
+.chapter-preview {
+}

@@ -1,0 +1,212 @@
+@use "mixins" as *;
+
+:root {
+  /* Светлая тема (по умолчанию) */
+  --headers-color: black;
+  --white-color: white;
+  --bg-color: #f6f6f6;
+  --text-color: #222222;
+  --primary-color: #4a6fa5;
+  --secondary-color: #6c757d;
+  --accent-color: #ff6b6b;
+  --accent-color-2: #d35959;
+  --code-bg: #d9d9d9;
+  --border-color: #444;
+  --note-color: #15313b;
+  --border-1: 1px solid var(--border-color);
+  --border-2: 2px solid var(--border-color);
+  --border-4: 4px solid var(--border-color);
+  --overlay-color: rgba(45, 45, 45, 0.83);
+  --task-color: #cbcbcb;
+  --commentary-color: #72b431;
+  --invert: invert(0);
+}
+
+:root[data-theme="dark"] {
+  --headers-color: white;
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #6d9eeb;
+  --secondary-color: #a0a0a0;
+  --accent-color: #ff8e8e;
+  --code-bg: #2d2d2d;
+  --note-color: #182630;
+  --task-color: #0e0e0e;
+  --commentary-color: #71a63b;
+  --invert: invert(1);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-color);
+  margin-block: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+.invert {
+  filter: var(--invert);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition-duration: .2s;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &.stop-scroll {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.box {
+  padding-inline: 16px;
+}
+
+.topic {
+  & img {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    max-height: 1200px;
+    object-fit: contain;
+    margin: 20px auto;
+  }
+}
+
+.container {
+  padding-inline: 16px;
+  max-width: 800px; /* Оптимальная ширина для чтения */
+  margin: 0 auto; /* Центрирование контента */
+}
+
+pre, code {
+  font-family: 'Courier New', monospace;
+  background-color: var(--code-bg);
+  border-radius: 4px;
+}
+
+pre {
+  margin-bottom: 16px;
+  padding: 1em;
+  overflow-x: auto;
+  border-left: 3px solid var(--primary-color);
+
+  &.variant {
+    border-left: none;
+    padding: 8px;
+  }
+}
+
+th {
+  font-size: 20px;
+
+  padding: 4px;
+}
+
+td {
+  text-align: center;
+  font-size: 20px;
+  padding: 6px;
+}
+
+figure {
+  & img {
+    margin-bottom: 0 !important;
+  }
+}
+
+figcaption {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+ul, ol {
+  padding-inline: 16px;
+}
+
+li {
+  margin-block: 4px;
+}
+
+.notecard {
+  margin-block: 16px;
+  padding: 16px;
+  padding-left: 40px;
+  border-radius: 6px;
+  background-color: var(--note-color);
+  border-left: 3px solid var(--primary-color);
+  position: relative;
+  color: var(--white-color);
+
+  &::before {
+    content: 'i';
+    left: 10px;
+    top: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    position: absolute;
+  }
+}
+
+.mobile-hidden {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.mobile-above-hidden {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.green {
+  color: var(--commentary-color);
+}

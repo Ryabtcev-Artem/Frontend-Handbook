@@ -1,0 +1,50 @@
+@use "../../mixins" as *;
+.nav-buttons {
+  border: var(--border-4);
+  border-radius: 6px;
+  display: flex;
+  margin-block: 20px;
+  margin-bottom: 60px;
+  a{
+    @include mobile-s{
+      font-size: 14px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--headers-color);
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    &::before{
+      content: '';
+      background-image: url("../../images/InternetImages/NavButtons/arrowLeft.svg");
+      background-size: contain;
+      position: absolute;
+      top: 10px;
+      height: 30px;
+      width: 30px;
+    }
+    &:first-child{
+      padding-block: 17px;
+      padding-left: 20px;
+      border-right: var(--border-2);
+      &::before{
+        left: 0;
+      }
+    }
+    &:last-child{
+      padding-block: 17px;
+      padding-right: 20px;
+      border-left: var(--border-2);
+      &::before{
+        transform: rotate(180deg);
+        right: 0;
+      }
+    }
+  }
+}

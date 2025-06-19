@@ -1,0 +1,76 @@
+.js-playground{
+  &__editor{
+    border: var(--border-1);
+    margin-top: 16px;
+  }
+  &__check {
+    background-color: var(--commentary-color);
+    color: var(--white-color);
+  }
+  &__buttons{
+    margin-block: 12px;
+    width: 100%;
+    display: flex;
+  }
+  &__run {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin-left: 16px;
+  }
+  &__reset,
+  &__check,
+  &__run {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  &__reset{
+    border: var(--border-1);
+    background-color: var(--note-color);
+    color: var(--white-color);
+    margin-left: auto;
+  }
+  &__output{
+    border: var(--border-1);
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  &__examples{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+.reset-overlay{
+  position: fixed;
+  background-color: var(--overlay-color);
+  z-index: 200;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  &__content{
+    border-radius: 10px;
+    padding: 16px;
+    margin-block: auto;
+    background-color: var(--bg-color);
+  }
+  &__buttons{
+    display: flex;
+  }
+  &__yes,&__no{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 120px;
+  }
+  &__yes{
+    background-color: var(--commentary-color);
+  }
+  &__no{
+    background-color: var(--accent-color);
+    margin-left: auto;
+  }
+}
