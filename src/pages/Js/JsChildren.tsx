@@ -9,6 +9,7 @@ import Switch from "./Switch/Switch.tsx";
 import Loops from "./Loops/Loops.tsx";
 import FunctionTypes from "./FunctionTypes/FunctionTypes.tsx";
 import Objects from "./Objects/Objects.tsx";
+import This from "./This/This.tsx";
 // import ArrowVsClassic from "./ArrowVsClassic/ArrowVsClassic.tsx";
 // import Closures from "./Closures/Closures.tsx";
 // import Numbers from "./Numbers/Numbers.tsx";
@@ -35,6 +36,7 @@ export const JsChildren = [
   { path: "Loops", element: <Loops /> },
   { path: "FunctionTypes", element: <FunctionTypes /> },
   { path: "Objects", element: <Objects /> },
+  { path: "This", element: <This /> },
   // { path: "ArrowVsClassic", element: <ArrowVsClassic /> },
   // { path: "Closures", element: <Closures /> },
   // { path: "Numbers", element: <Numbers /> },

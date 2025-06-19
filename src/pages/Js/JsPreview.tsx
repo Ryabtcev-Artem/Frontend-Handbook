@@ -63,6 +63,10 @@ export default function JsPreview(props: JsPreviewProps) {
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.3</div>
+            <Link to="/js/This">Контекст this</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">2.3</div>
             <Link to="/js/Closures">Замыкания</Link>
           </div>
         </div>
