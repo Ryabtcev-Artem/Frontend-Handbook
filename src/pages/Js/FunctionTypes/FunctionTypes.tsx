@@ -11,7 +11,7 @@ export default function FunctionTypes(props: FunctionTypesProps) {
     <section className={'topic container'}>
       <h2>Типы функций в JavaScript</h2>
       <p>
-        Функция — это блок кода, который можно вызывать несколько раз, передавая параметры и получая результат.
+        <strong>Функция</strong> — это именованный или анонимный блок кода, который выполняет определённую задачу, может принимать входные параметры, выполнять операции и возвращать результат. Функции позволяют повторно использовать код, обеспечивают изоляцию логики и управляют потоком выполнения программы. Каждая функция имеет собственный контекст выполнения и область видимости для локальных переменных.
       </p>
       <h3>Объявление функций</h3>
       <p>
@@ -83,7 +83,7 @@ const divide = (a, b) => a / b;`}</VsCode>
         <li>Arrow-функции не имеют собственного <code>this</code> и удобны для коротких операций.
         </li>
       </ul>
-      <NavButtons prev={'/js/Loops'} next={'/js/Objects'} />
+      <NavButtons prev={'/js/Loops'} next={'/js/Closures'} />
       <Test
         allTasks={[
           {
@@ -177,32 +177,37 @@ const test = () => 1`
         ]}
       />
       <JsPlayground
-        taskId={3}
-        functionName={'repeatString'}
+        taskId={6}
+        functionName={'fibonacciSequence'}
         args={[
-          ['"hello"', 3],
-          ['"abc"', 0],
-          ['"x"', 5],
+          [0],
+          [1],
+          [5],
+          [10]
         ]}
         answers={[
-          'hellohellohello',
-          '',
-          'xxxxx',
+          [0],
+          [0, 1],
+          [0, 1, 1, 2, 3, 5],
+          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55],
         ]}
-        defaultCode={`function repeatString(str, times){
-  
+        defaultCode={`function fibonacciSequence(n) {
+
 }`}
-        title={'Задача: Повторение строки'}
+        title={'Задача: Рекурсивное построение массива чисел Фибоначчи'}
         examples={[
-          'repeatString("hello", 3) // "hellohellohello"',
-          'repeatString("abc", 0) // ""',
-          'repeatString("x", 5) // "xxxxx"',
+          'fibonacciSequence(0) // [0]',
+          'fibonacciSequence(1) // [0, 1]',
+          'fibonacciSequence(5) // [0, 1, 1, 2, 3, 5]',
         ]}
         description={
-          'Функция repeatString принимает строку str и число times. Нужно вернуть новую строку, состоящую из str, повторённой times раз подряд. Если times равно 0, вернуть пустую строку. Реализуйте решение используя любую функцию и цикл.'
+          'Реализуйте функцию fibonacciSequence, которая принимает число n и возвращает массив чисел Фибоначчи от 0 до n включительно, используя рекурсию. Числа Фибоначчи - это числовая последовательность, в которой каждое число равно сумме двух предыдущих.'
         }
       />
-      <NavButtons prev={'/js/Loops'} next={'/js/Objects'} />
+
+
+
+      <NavButtons prev={'/js/Loops'} next={'/js/Closures'} />
     </section>
   )
 }

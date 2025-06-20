@@ -9,9 +9,10 @@ import Switch from "./Switch/Switch.tsx";
 import Loops from "./Loops/Loops.tsx";
 import FunctionTypes from "./FunctionTypes/FunctionTypes.tsx";
 import Objects from "./Objects/Objects.tsx";
-import This from "./This/This.tsx";
-// import ArrowVsClassic from "./ArrowVsClassic/ArrowVsClassic.tsx";
-// import Closures from "./Closures/Closures.tsx";
+import Context from "./Context/Context.tsx";
+import Closures from "./Closures/Closures.tsx";
+import Curry from "./Curry/Curry.tsx";
+import Arrow from "./Arrow/Arrow.tsx";
 // import Numbers from "./Numbers/Numbers.tsx";
 // import Strings from "./Strings/Strings.tsx";
 // import Objects from "./Objects/Objects.tsx";
@@ -36,9 +37,10 @@ export const JsChildren = [
   { path: "Loops", element: <Loops /> },
   { path: "FunctionTypes", element: <FunctionTypes /> },
   { path: "Objects", element: <Objects /> },
-  { path: "This", element: <This /> },
-  // { path: "ArrowVsClassic", element: <ArrowVsClassic /> },
-  // { path: "Closures", element: <Closures /> },
+  { path: "Context", element: <Context /> },
+  { path: "Closures", element: <Closures /> },
+  { path: "Curry", element: <Curry /> },
+  { path: "Arrow", element: <Arrow /> },
   // { path: "Numbers", element: <Numbers /> },
   // { path: "Strings", element: <Strings /> },
   // { path: "Objects", element: <Objects /> },

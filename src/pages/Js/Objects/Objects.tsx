@@ -140,7 +140,7 @@ console.log(original.a)  // 1
         <li>Методы — обычные функции, у которых есть доступ к this.</li>
         <li>Для вложенных структур — глубокое копирование.</li>
       </ul>
-      <NavButtons prev={'/js/FunctionTypes'} next={'/js/This'} />
+      <NavButtons prev={'/js/FunctionTypes'} next={'/js/Context'} />
       <Test
         allTasks={[
           {
@@ -250,7 +250,7 @@ console.log(obj.a);`,
           'getAdults({ john: 12, jane: 16, max: 20 }) // { max: 20 }',
         ]}
       />
-      <NavButtons prev={'/js/FunctionTypes'} next={'/js/This'} />
+      <NavButtons prev={'/js/FunctionTypes'} next={'/js/Context'} />
     </section>
   )
 }

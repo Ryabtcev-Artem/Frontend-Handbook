@@ -59,19 +59,26 @@ export default function JsPreview(props: JsPreviewProps) {
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.2</div>
+            <Link to="/js/Closures">Замыкания</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">2.3</div>
+            <Link to="/js/Curry">Каррирование</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">2.4</div>
+            <Link to="/js/Arrow">Стрелочная функция</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">2.3</div>
             <Link to="/js/Objects">Объекты</Link>
           </div>
           <div className="chapter__topic">
-            <div className="chapter__topic-id">2.3</div>
-            <Link to="/js/This">Контекст this</Link>
-          </div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">2.3</div>
-            <Link to="/js/Closures">Замыкания</Link>
+            <div className="chapter__topic-id">2.4</div>
+            <Link to="/js/Context">Область видимости и контекст</Link>
           </div>
         </div>
       </div>
-
       <div className="chapter__blocks container">
         <h3 className="chapter__block-title">Работа с данными</h3>
         <div className="chapter__block">

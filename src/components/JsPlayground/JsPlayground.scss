@@ -36,6 +36,11 @@
     border: var(--border-1);
     padding: 12px;
     margin-bottom: 16px;
+    & div {
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
   }
   &__examples{
     display: flex;

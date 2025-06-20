@@ -1,46 +1,13 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
-import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
+import Test from "../../../components/Test/Test.tsx";
 
 type ThisProps = {}
-
 export default function This(props: ThisProps) {
   const {} = props
 
   return (
-    <section className={'topic container'}>
-      <h2>Контекст и область видимости в JavaScript: основы для понимания this</h2>
-
-      <h3>Область видимости (scope)</h3>
-      <p>
-        <strong>Область видимости</strong> — это часть программы, где определённые переменные и функции доступны для использования.
-      </p>
-      <p>Область видимости создаётся с помощью блоков кода — например, фигурных скобок <code>{'{}'}</code>, функций, модулей или классов. Переменные, объявленные внутри области, недоступны снаружи. Исключение составляет <code>var</code>, которая имеет функциональную или глобальную область видимости, а не блочную.
-      </p>
-      <VsCode>{`{\n  let a = 10;\n  console.log(a); // 10\n}\nconsole.log(a); // ReferenceError: a is not defined`}</VsCode>
-
-      <p>JavaScript поддерживает лексическую (статическую) область видимости — доступность переменных определяется по расположению кода при написании, а не во время выполнения.</p>
-
-      <h3>Контекст выполнения (execution context)</h3>
-      <p>
-        <strong>Контекст выполнения</strong> — это внутренняя среда, в которой выполняется код. Контекст содержит информацию о том, какие переменные, функции и параметры доступны, а также на что ссылается <code>this</code> в текущей функции.
-      </p>
-
-      <p>Контекст создаётся при вызове функции. Каждый вызов функции создаёт новый контекст, в котором выполняется код. Он включает в себя следующие компоненты:</p>
-      <ul>
-        <li>Лексическая область видимости (ссылки на доступные переменные и функции)</li>
-        <li>Значение <code>this</code></li>
-        <li>Параметры и локальные переменные</li>
-      </ul>
-
-      <p>Контекст — это как «рабочее пространство» для функции, в котором она выполняется.</p>
-
-      <h3>Важность фигурных скобок <code>{'{}'}</code> в создании области видимости
-      </h3>
-      <p>Фигурные скобки создают блочную область видимости для переменных, объявленных с помощью <code>let</code> и <code>const</code>. Это значит, что такие переменные доступны только внутри этих скобок.
-      </p>
-      <VsCode>{`function example() {\n  if (true) {\n    let blockVar = 'inside block';\n    console.log(blockVar); // inside block\n  }\n  console.log(blockVar); // ReferenceError: blockVar is not defined\n}`}</VsCode>
-
+    <section className={`topic container`}>
       <h2>This в JavaScript: определение и особенности</h2>
 
       <p>
