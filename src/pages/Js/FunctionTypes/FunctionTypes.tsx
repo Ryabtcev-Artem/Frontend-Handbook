@@ -177,14 +177,8 @@ const test = () => 1`
         ]}
       />
       <JsPlayground
-        taskId={6}
+        taskId={3}
         functionName={'fibonacciSequence'}
-        args={[
-          [0],
-          [1],
-          [5],
-          [10]
-        ]}
         answers={[
           [0],
           [0, 1],
@@ -196,9 +190,9 @@ const test = () => 1`
 }`}
         title={'Задача: Рекурсивное построение массива чисел Фибоначчи'}
         examples={[
-          'fibonacciSequence(0) // [0]',
-          'fibonacciSequence(1) // [0, 1]',
-          'fibonacciSequence(5) // [0, 1, 1, 2, 3, 5]',
+          'fibonacciSequence(0) \n// Ожидаемый результат: [0]',
+          'fibonacciSequence(1) \n// Ожидаемый результат: [0, 1]',
+          'fibonacciSequence(5) \n// Ожидаемый результат: [0, 1, 1, 2, 3, 5]',
         ]}
         description={
           'Реализуйте функцию fibonacciSequence, которая принимает число n и возвращает массив чисел Фибоначчи от 0 до n включительно, используя рекурсию. Числа Фибоначчи - это числовая последовательность, в которой каждое число равно сумме двух предыдущих.'

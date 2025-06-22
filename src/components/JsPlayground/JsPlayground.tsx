@@ -7,11 +7,11 @@ type JsPlaygroundProps = {
   defaultCode: string,
   title: string,
   description: string,
-  args: any,
   answers: any,
   functionName: string,
   examples: string[],
   taskId: number,
+  delay?: number,
 }
 export default function JsPlayground(props: JsPlaygroundProps) {
   const {
@@ -20,9 +20,9 @@ export default function JsPlayground(props: JsPlaygroundProps) {
     defaultCode,
     title,
     description,
-    args,
     answers,
-    functionName
+    functionName,
+    delay,
   } = props
   const [code, setCode] = useState(defaultCode);
   const [isResetOverlay, setIsResetOverlay] = useState(false)
@@ -43,7 +43,7 @@ export default function JsPlayground(props: JsPlaygroundProps) {
   const saveCodeById = (value: any) => {
     localStorage.setItem(`taskCode${taskId}`, value)
   }
-  const runCode = () => {
+  const runCode = async () => {
     const logs: string[] = [];
     const originalLog = console.log;
     console.log = (...args: any[]) => {
@@ -51,6 +51,9 @@ export default function JsPlayground(props: JsPlaygroundProps) {
     };
     try {
       eval(code);
+      if (delay) {
+        await new Promise(resolve => setTimeout(resolve, delay))
+      }
     } catch (err) {
       logs.push('💥 Ошибка при выполнении кода:');
       logs.push(String(err));
@@ -59,60 +62,39 @@ export default function JsPlayground(props: JsPlaygroundProps) {
     console.log(originalLog)
     setOutput(logs);
   }
-  const checkCode = () => {
+  const checkCode = async () => {
     const logs: string[] = [];
     const originalLog = console.log;
     console.log = (...args: any[]) => {
       logs.push(args.map(String).join(" "));
     };
-    for (let i = 0; i < args.length; i++) {
-      let strFunction = `${functionName}(`
-      let properties = ''
-      for (let j = 0; j < args[i].length; j++) {
-        let currentArgument = args[i][j]
-        if (typeof args[i][j] === 'object' && args[i][j] !== null) {
-          currentArgument = JSON.stringify(args[i][j])
+    let codeWithFunction = ''
+    for (let i = 0; i < examples.length; i++) {
+      codeWithFunction = `${code}\n${examples[i]}`
+      try {
+        if (delay) {
+          await new Promise(resolve => setTimeout(resolve, delay))
         }
-        if (j === args[i].length - 1) {
-          properties += currentArgument
+        const result = eval(codeWithFunction)
+        if (JSON.stringify(answers[i]) !== JSON.stringify(result)) {
+          logs.push('❌ Ваш код не прошел проверку')
+          logs.push(`input: ${examples[i]}`)
+          logs.push(`your output: ${JSON.stringify(result)}`)
           break
         }
-        properties += currentArgument + ', '
-      }
-      strFunction += properties + ')'
-      const newCode = `${code}\n${strFunction}`
-      try {
-        let result = eval(newCode);
-        if (typeof result === 'object' && result !== null){
-          result = JSON.stringify(result)
-        }
-        let currentAnswer = answers[i]
-        if (typeof currentAnswer === 'object' && currentAnswer!== null){
-          currentAnswer = JSON.stringify(answers[i])
-        }
-        if (result !== currentAnswer) {
-          logs.push('❌ Неверный результат');
-          logs.push(`Ввод: ${strFunction}`);
-          logs.push(`Ваш вывод: ${result}`);
-          logs.push(`Ожидалось: ${currentAnswer}`);
-          break;
-        }
-
-        if (i === args.length - 1) {
-          logs.push('🎉 Отлично! Все тесты пройдены.');
-          logs.push('✅ Ваш код работает корректно на всех входных данных.');
+        if (i === examples.length - 1) {
+          logs.push('✅ Ура, ваш код прошел все проверки! 🎉🥳🚀');
+          logs.push('💡 Вы настоящий JS-ниндзя! 🧠😎');
         }
       } catch (err) {
         logs.push('💥 Ошибка при выполнении кода:');
         logs.push(String(err));
-        break
       }
-
     }
     console.log = originalLog;
     console.log(originalLog)
     setOutput(logs);
-  };
+  }
 
   return (
     <>

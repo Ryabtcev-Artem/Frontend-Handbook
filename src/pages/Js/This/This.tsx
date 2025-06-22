@@ -107,7 +107,7 @@ export default function This(props: ThisProps) {
       </ul>
       <NavButtons
         prev={'/js/Objects'}
-        next={'/js'}
+        next={'/js/Prototypes'}
       />
 
       <Test
@@ -269,7 +269,7 @@ export default function This(props: ThisProps) {
       />
       <NavButtons
         prev={'/js/Objects'}
-        next={'/js'}
+        next={'/js/Prototypes'}
       />
     </section>
   )

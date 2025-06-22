@@ -305,18 +305,13 @@ console.log(i);`,
       <JsPlayground
         taskId={2}
         functionName={'countEven'}
-        args={[
-          [[1, 2, 3, 4, 5, 6]],
-          [[10, 15, 20]],
-          [[7, 9, 11]],
-        ]}
         answers={[3, 2, 0]}
         defaultCode={'function countEven(numbers){\n  \n}'}
         title={'Задача: Считаем чётные числа'}
         examples={[
-          'countEven([1, 2, 3, 4, 5, 6]) // 3',
-          'countEven([10, 15, 20]) // 2',
-          'countEven([7, 9, 11]) // 0'
+          'countEven([1, 2, 3, 4, 5, 6]) \n// Ожидаемый результат: 3',
+          'countEven([10, 15, 20]) \n// Ожидаемый результат: 2',
+          'countEven([7, 9, 11]) \n// Ожидаемый результат: 0'
         ]}
         description={
           'В функции countEven вам передаётся массив чисел numbers. Нужно сосчитать, сколько в этом массиве чётных чисел, и вернуть это количество. Используйте любой цикл: for, for...of или while.'

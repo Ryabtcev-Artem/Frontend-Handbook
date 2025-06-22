@@ -116,20 +116,14 @@ console.log(curriedSum(1, 2, 3));     // 6`}</VsCode>
         либо использовать готовые решения из библиотек, например, <code>_.curry</code> из Lodash.
       </p>
       <NavButtons prev={'/js/Closures'} next={'/js/Arrow'} />
-      <JsPlayground
-        taskId={5}
+       <JsPlayground
+        taskId={4}
         functionName={'multiplyCurry'}
-        args={[
-          ['2', '3', '4'],
-          ['1', '2'],
-          ['5'],
-          ['2', '2', '2', '2'],
-        ]}
         answers={[
-          '24',
-          '2',
-          '5',
-          '16',
+          24,
+          2,
+          5,
+          16,
         ]}
         defaultCode={`function multiplyCurry(...args) {
 
@@ -138,19 +132,12 @@ console.log(curriedSum(1, 2, 3));     // 6`}</VsCode>
         description={`Реализуйте функцию multiplyCurry, которая может принимать любое количество чисел на каждом этапе вызова, 
 накапливать их и возвращать произведение всех чисел, когда вызвана без аргументов.
 
-Пример:
-const mul = multiplyCurry();
-mul(2)(3)(4)(); // 24
-mul(1, 2)(1)(); // 2
-mul(5)();       // 5
-mul(2)(2, 2)(2)(); // 16
-
 Функция должна быть гибкой — принимать аргументы как по одному, так и группами. Финальный вызов без аргументов завершает цепочку и возвращает результат.`}
         examples={[
-          'multiplyCurry()(2)(3)(4)() // 24',
-          'multiplyCurry()(1, 2)(1)() // 2',
-          'multiplyCurry()(5)() // 5',
-          'multiplyCurry()(2)(2, 2)(2)() // 16',
+          'multiplyCurry()(2)(3)(4)() \n// Ожидаемый результат: 24',
+          'multiplyCurry()(1, 2)(1)() \n// Ожидаемый результат: 2',
+          'multiplyCurry()(5)() \n// Ожидаемый результат: 5',
+          'multiplyCurry()(2)(2, 2)(2)() \n// Ожидаемый результат: 16',
         ]}
       />
       <NavButtons prev={'/js/Closures'} next={'/js/Arrow'} />

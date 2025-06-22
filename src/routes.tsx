@@ -9,6 +9,9 @@ import Css from "./pages/Css/Css.tsx";
 import {CssChildren} from "./pages/Css/CssChildren.tsx";
 import Js from "./pages/Js/Js.tsx";
 import {JsChildren} from "./pages/Js/JsChildren.tsx";
+import Other from "./pages/Other/Other.tsx";
+import NodeJs from "./pages/NodeJs/NodeJs.tsx";
+import {NodeJsChildren} from "./pages/NodeJs/NodeJsChildren.tsx";
 export const routes = [
   {
     path: '/',
@@ -38,5 +41,14 @@ export const routes = [
     path: '/js',
     element: <Js />,
     children: JsChildren,
+  },
+  {
+    path: '/other',
+    element: <Other />,
+  },
+  {
+    path: '/nodeJs',
+    element: <NodeJs/>,
+    children: NodeJsChildren,
   }
 ]

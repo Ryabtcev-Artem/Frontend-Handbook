@@ -46,7 +46,7 @@ switch (role) {
   default:
     console.log('Гость');
 }`}
-</VsCode>
+      </VsCode>
       Результат: <code>Администратор</code>
 
       <h3>Пример без break</h3>
@@ -60,7 +60,7 @@ switch (n) {
   default:
     console.log('Что-то ещё');
 }`}
-</VsCode>
+      </VsCode>
       Результат:
       <VsCode>{`Два\nТри\nЧто-то ещё`}</VsCode>
       Все блоки после совпадения выполнились из-за отсутствия <code>break</code>.
@@ -84,7 +84,7 @@ switch (x) {
   default:
     console.log('Что-то другое');
 }`}
-</VsCode>
+      </VsCode>
 
       <h3>Когда использовать switch</h3>
       <code>switch</code> удобно использовать, когда:
@@ -155,11 +155,10 @@ switch (x) {
       <JsPlayground
         taskId={1}
         functionName={'switchWeather'}
-        args={[['"rain"'],['"sunny"'],['"default"']]}
-        answers={['бери зонт','пошли загорать', 'сидим дома']}
+        answers={['бери зонт', 'пошли загорать', 'сидим дома']}
         defaultCode={'function switchWeather(weather){\n  \n}'}
         title={'Задача: Прогноз на сегодня'}
-        examples={['switchWeather("rain") // бери зонт','switchWeather("sunny") // пошли загорать', 'switchWeather("default") // сидим дома']}
+        examples={['switchWeather("rain") \n// Ожидаемый результат: бери зонт', 'switchWeather("sunny") \n// Ожидаемый результат: пошли загорать', 'switchWeather("default") \n// Ожидаемый результат: сидим дома']}
         description={'В функции switchWeather вы получаете строку weather. Если в weather строка "rain", то выведите в консоль "бери зонт", если "sunny" - "пошли загорать", если что-то другое - "сидим дома". Реализуйте код, используя оператор switch.'}
       />
       <NavButtons

@@ -1,4 +1,5 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
+import VsCode from "../../../components/VsCode/VsCode.tsx";
 
 type EventLoopProps = {}
 export default function EventLoop(props: EventLoopProps) {
@@ -8,53 +9,58 @@ export default function EventLoop(props: EventLoopProps) {
     <section className="topic container">
       <h2>Event Loop — как работает и почему он важен</h2>
       <p>
-        <strong>Event Loop</strong> — это механизм <strong>среды</strong> выполнения JavaScript (например, браузера), который управляет выполнением кода,
-        обработкой асинхронных задач и событий. Важно понимать, что Event Loop — это <em>не часть самого JavaScript</em>, а фича среды, которая позволяет
-        однопоточному JS эффективно работать с асинхронностью.
+        <strong>Event Loop</strong> — это механизм <strong>среды выполнения JavaScript</strong> (браузера или Node.js), который управляет выполнением кода, обработкой асинхронных задач и событий. Важно понимать, что Event Loop — не часть самого языка JavaScript, а именно функция среды, позволяющая однопоточному JS эффективно работать с асинхронностью.
       </p>
 
-      <h3>Почему Event Loop нужен?</h3>
-      <p>
-        JavaScript — однопоточный язык, он может выполнять только одну операцию за раз. Но веб-приложения работают с сетью, таймерами, пользователями и т.д.
-        Event Loop позволяет выполнять асинхронные операции, не блокируя главный поток.
-      </p>
-
-      <h3>Основные понятия</h3>
+      <h3>Основные компоненты работы JS</h3>
       <ul>
         <li>
-          <strong>Call Stack (стек вызовов)</strong> — здесь выполняются функции. Когда функция вызывается — она кладётся в стек, когда завершает — удаляется.
+          <strong>Call Stack (стек вызовов)</strong> — это структура данных, которая хранит стек вызовов функций. Когда вызывается функция, она кладётся в стек, и пока функция не завершится, другие функции не выполняются. После завершения функция удаляется из стека.
         </li>
         <li>
-          <strong>Web APIs (браузерные API)</strong> — функции вне стека JS, например, setTimeout, DOM-события, AJAX. Они выполняются браузером параллельно.
+          <strong>Memory Heap (куча памяти)</strong> — область памяти, где хранятся все объекты, функции и сложные данные. Heap — это неупорядоченная "куча" памяти, из которой движок выделяет место под объекты и управляет ссылками на них.
         </li>
         <li>
-          <strong>Task Queues (очереди задач)</strong> — сюда браузер ставит задачи, готовые к выполнению:
+          <strong>Web APIs / Node APIs</strong> — внешние API, предоставляемые средой (браузером или Node.js). Сюда входят функции работы с таймерами (setTimeout), сетевые запросы (fetch или http-модули), события DOM и другие асинхронные операции. Они работают параллельно с основным JS-потоком.
+        </li>
+        <li>
+          <strong>Task Queues (очереди задач)</strong> — сюда помещаются коллбэки, которые готовы к выполнению:
           <ul>
-            <li><em>Macrotasks (tasks)</em> — обработчики событий, таймеры, AJAX.</li>
-            <li><em>Microtasks</em> — промисы (.then/.catch), queueMicrotask, MutationObserver.</li>
+            <li>
+              <em>Macrotasks (tasks)</em> — обработчики событий, таймеры, запросы. Они ставятся в очередь и выполняются по одному.
+            </li>
+            <li>
+              <em>Microtasks</em> — промисы (.then/.catch), queueMicrotask, MutationObserver. Эти задачи имеют более высокий приоритет и выполняются сразу после текущего синхронного кода и перед следующей macrotask.
+            </li>
           </ul>
         </li>
       </ul>
 
       <h3>Как работает Event Loop — пошагово</h3>
       <ol>
-        <li>JS движок выполняет синхронный код из стека вызовов.</li>
-        <li>Асинхронные операции (например, setTimeout, fetch) запускаются в Web APIs.</li>
-        <li>Когда асинхронная операция завершается, браузер помещает callback в очередь задач (microtasks или macrotasks).</li>
-        <li>Когда стек вызовов пуст, Event Loop выполняет все microtasks подряд.</li>
-        <li>После этого берётся одна задача из macrotasks и выполняется в стеке.</li>
-        <li>Цикл повторяется.</li>
+        <li>JavaScript-движок выполняет синхронный код из <strong>Call Stack</strong>.
+        </li>
+        <li>Асинхронные операции (например, setTimeout, fetch) запускаются через <strong>Web APIs</strong>.
+        </li>
+        <li>Когда асинхронная операция завершается, её коллбэк помещается в одну из очередей задач — либо в microtasks, либо в macrotasks.</li>
+        <li>Когда стек вызовов пуст, Event Loop первым делом выполняет все задачи из очереди <strong>microtasks</strong>.
+        </li>
+        <li>После обработки microtasks Event Loop берёт одну задачу из очереди <strong>macrotasks</strong> и помещает её в Call Stack для выполнения.
+        </li>
+        <li>Цикл повторяется постоянно, позволяя JS не блокировать выполнение и обрабатывать асинхронные операции.</li>
       </ol>
-
+      <p>Если хотите лучше разобраться, то есть сайт <a
+        href="https://www.jsv9000.app/"
+      >JS Visualizer</a> с понятной пошаговой визуализацией event loop, там можно выбрать или написать самому пример кода и увидеть его пошаговое выполнение.</p>
       <h3>Важные детали</h3>
       <ul>
-        <li>Microtasks выполняются перед следующей macrotask — это важно для скорости и порядка.</li>
-        <li>Если во время выполнения macrotask создаются новые microtasks, они выполнятся сразу.</li>
-        <li>setTimeout(fn, 0) — не выполняется сразу, а после всех microtasks и текущей macrotask.</li>
+        <li>Microtasks всегда выполняются перед следующей macrotask — это ускоряет обработку промисов и других микрозадач.</li>
+        <li>Если во время выполнения macrotask появляются новые microtasks, они будут выполнены сразу же после неё.</li>
+        <li>setTimeout(fn, 0) — не выполняется мгновенно, а после того, как выполнены все microtasks и текущая macrotask.</li>
       </ul>
 
-      <h3>Пример кода и вывод в консоль</h3>
-      <pre>{`console.log('start');
+      <h3>Пример кода и порядок вывода</h3>
+      <VsCode>{`console.log('start');
 
 setTimeout(() => {
   console.log('timeout');
@@ -64,27 +70,35 @@ Promise.resolve().then(() => {
   console.log('promise');
 });
 
-console.log('end');`}</pre>
+console.log('end');`}</VsCode>
 
       <p>Вывод в консоль будет:</p>
-      <pre>{`start
+      <VsCode>{`start
 end
 promise
-timeout`}</pre>
+timeout`}</VsCode>
 
       <p>Объяснение:</p>
       <ul>
-        <li>start и end — синхронный код, выводятся сразу.</li>
-        <li>promise — microtask, выполняется сразу после синхронного кода.</li>
-        <li>timeout — macrotask, выполняется после microtasks.</li>
+        <li>
+          <strong>start</strong> и <strong>end</strong> — синхронный код, выполняется сразу.
+        </li>
+        <li>
+          <strong>promise</strong> — микротаск, выполняется сразу после синхронного кода.
+        </li>
+        <li>
+          <strong>timeout</strong> — макротаск, выполняется после всех микротасков.
+        </li>
       </ul>
 
       <h3>Итог</h3>
       <p>
-        Event Loop — это ключевой механизм, который позволяет JavaScript эффективно работать с асинхронным кодом в браузере,
-        управляя порядком выполнения задач и не блокируя интерфейс.
+        <strong>Event Loop</strong> — ключевой механизм, который позволяет JavaScript эффективно работать с асинхронным кодом в однопоточном окружении, управляя очередями задач и не блокируя основной поток выполнения.
       </p>
-      <NavButtons prev={'/browser/PageRequest'} next={'/browser'} />
+      <NavButtons
+        prev={'/browser/PageRequest'}
+        next={'/browser'}
+      />
     </section>
   )
 }

@@ -140,7 +140,7 @@ console.log(original.a)  // 1
         <li>Методы — обычные функции, у которых есть доступ к this.</li>
         <li>Для вложенных структур — глубокое копирование.</li>
       </ul>
-      <NavButtons prev={'/js/FunctionTypes'} next={'/js/Context'} />
+      <NavButtons prev={'/js/Generators'} next={'/js/Context'} />
       <Test
         allTasks={[
           {
@@ -226,31 +226,26 @@ console.log(obj.a);`,
           }
         ]}
       />
-      <JsPlayground
-        taskId={4}
+    <JsPlayground
+        taskId={5}
         functionName={'getAdults'}
-        args={[
-          [{ alice: 17, bob: 22, charlie: 30 }],
-          [{ anna: 15, mike: 18 }],
-          [{ john: 12, jane: 16, max: 20 }],
-        ]}
         answers={[
           { bob: 22, charlie: 30 },
           { mike: 18 },
           { max: 20 }
         ]}
         defaultCode={`function getAdults(people) {
-  // Возвращайте только тех, чей возраст >= 18
+        
 }`}
         title={'Задача: Фильтруем совершеннолетних'}
         description={'Функция getAdults получает объект people, где ключ — имя человека, а значение — его возраст. Нужно вернуть новый объект, в котором останутся только те, у кого возраст 18 или больше.'}
         examples={[
-          'getAdults({ alice: 17, bob: 22, charlie: 30 }) // { bob: 22, charlie: 30 }',
-          'getAdults({ anna: 15, mike: 18 }) // { mike: 18 }',
-          'getAdults({ john: 12, jane: 16, max: 20 }) // { max: 20 }',
+          'getAdults({ alice: 17, bob: 22, charlie: 30 }) \n// Ожидаемый результат: { bob: 22, charlie: 30 }',
+          'getAdults({ anna: 15, mike: 18 }) \n// Ожидаемый результат: { mike: 18 }',
+          'getAdults({ john: 12, jane: 16, max: 20 }) \n// Ожидаемый результат: { max: 20 }',
         ]}
       />
-      <NavButtons prev={'/js/FunctionTypes'} next={'/js/Context'} />
+      <NavButtons prev={'/js/Generators'} next={'/js/Context'} />
     </section>
   )
 }

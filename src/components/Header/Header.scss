@@ -17,13 +17,9 @@
     padding: 4px;
     border-radius: 50%;
     cursor: pointer;
-    transition-duration: .2s;
     border: var(--border-1);
     margin-left: auto;
     background-color: white;
-    &:hover{
-      filter: invert(1);
-    }
   }
   &__theme-image{
     width: 100%;
