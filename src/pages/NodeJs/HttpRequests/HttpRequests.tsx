@@ -1,4 +1,5 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
+import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 type HttpRequestsProps = {}
 export default function HttpRequests(props: HttpRequestsProps) {
@@ -228,7 +229,7 @@ app.listen(3000)`}</VsCode>
         <li>Express.js упрощает приём запросов и работу с их частями через req.query, req.body, req.params, req.headers.</li>
         <li>CORS — механизм безопасности браузера, регулирующий доступ к ресурсам с других доменов.</li>
       </ul>
+      <NavButtons prev={'/nodeJs/Timers'} next={'/nodeJs/DataParsing'} />
     </section>
-
   )
 }

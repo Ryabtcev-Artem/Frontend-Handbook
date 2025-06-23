@@ -79,4 +79,6 @@ export const allPages: Page[] = [
 
   { path: "/js/Storage", title: "localStorage, cookies", chapter: "JavaScript" },
   { path: "/js/MutationObserver", title: "MutationObserver", chapter: "JavaScript" },
+
+  // node.jsPreview
 ];

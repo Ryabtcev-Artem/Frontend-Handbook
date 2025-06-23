@@ -13,6 +13,8 @@ import AsyncBasics from "./AsyncBasics/AsyncBasics.tsx";
 import ErrorHandling from "./ErrorHandling/ErrorHandling.tsx";
 import Timers from "./Timers/Timers.tsx";
 import HttpRequests from "./HttpRequests/HttpRequests.tsx";
+import DataParsing from "./DataParsing/DataParsing.tsx";
+import Databases from "./Databases/Databases.tsx";
 
 export const NodeJsChildren = [
   {path: '', element: <NodeJsPreview />},
@@ -29,8 +31,6 @@ export const NodeJsChildren = [
   {path: 'ErrorHandling', element: <ErrorHandling />},
   {path: 'Timers', element: <Timers />},
   {path: 'HttpRequests', element: <HttpRequests/>},
-  {path: 'Intro', element: <Intro />},
-  {path: 'Intro', element: <Intro />},
-  {path: 'Intro', element: <Intro />},
-  {path: 'Intro', element: <Intro />},
+  {path: 'DataParsing', element: <DataParsing />},
+  {path: 'Databases', element: <Databases />},
 ]

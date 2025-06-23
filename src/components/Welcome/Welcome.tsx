@@ -17,7 +17,7 @@ export default function Welcome(props: WelcomeProps) {
       </h3>
       <p className={'welcome__answer'}>
         Если вы совсем новичок, можете начать с изучения темы <Link to={'/internet'}>Интернет</Link> — это даст вам общее понимание, как устроена работа сети на базовом уровне. <br />
-        Далее переходите к разделам: <Link to={'/browser'}>Браузер</Link>, <Link to="/html">HTML</Link>, <Link to="/css">CSS</Link> и <Link to="/javascript">JavaScript</Link>, чтобы узнать, из чего состоит любая веб-страница и как она работает. <br />
+        Далее переходите к разделам: <Link to={'/browser'}>Браузер</Link>, <Link to="/html">HTML</Link>, <Link to="/css">CSS</Link> и <Link to="/js">JavaScript</Link>, чтобы узнать, из чего состоит любая веб-страница и как она работает. <br />
       </p>
 {/*      <h3>Как оптимизировать рендеринг?</h3>*/}
 {/*      <p>*/}

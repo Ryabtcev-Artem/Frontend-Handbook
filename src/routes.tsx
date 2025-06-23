@@ -12,6 +12,8 @@ import {JsChildren} from "./pages/Js/JsChildren.tsx";
 import Other from "./pages/Other/Other.tsx";
 import NodeJs from "./pages/NodeJs/NodeJs.tsx";
 import {NodeJsChildren} from "./pages/NodeJs/NodeJsChildren.tsx";
+import React from "./pages/React/React.tsx";
+import {ReactChildren} from "./pages/React/ReactChildren.tsx";
 export const routes = [
   {
     path: '/',
@@ -50,5 +52,10 @@ export const routes = [
     path: '/nodeJs',
     element: <NodeJs/>,
     children: NodeJsChildren,
+  },
+  {
+    path: '/react',
+    element: <React />,
+    children: ReactChildren,
   }
 ]
