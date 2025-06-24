@@ -14,11 +14,11 @@ export default function ReactPreview() {
         <div className="chapter__block">
           <div className="chapter__topic">
             <div className="chapter__topic-id">1.1</div>
-            <Link to="/react/intro">Что такое React?</Link>
+            <Link to="/react/Intro">Что такое React?</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">1.2</div>
-            <Link to="/react/setup">Установка и запуск приложения</Link>
+            <Link to="/react/Setup">Настройка окружения и создание проекта</Link>
           </div>
         </div>
 
@@ -26,35 +26,47 @@ export default function ReactPreview() {
         <div className="chapter__block">
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.1</div>
-            <Link to="/react/components">Компоненты и JSX</Link>
+            <Link to="/react/Components">Компоненты и JSX</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.2</div>
-            <Link to="/react/props-state">Props и State</Link>
+            <Link to="/react/Lifecycle">Жизненный цикл компонента</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.3</div>
-            <Link to="/react/event-handling">Обработка событий</Link>
+            <Link to="/react/Props">Props - передача данных</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">2.4</div>
-            <Link to="/react/lifecycle">Жизненный цикл компонентов</Link>
+            <Link to="/react/Rendering">Условный рендеринг и списки</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">2.5</div>
+            <Link to="/react/EventHandling">Обработка событий</Link>
           </div>
         </div>
 
-        <h3 className="chapter__block-title">3. Расширенные возможности</h3>
+        <h3 className="chapter__block-title">3. Состояние и хуки</h3>
         <div className="chapter__block">
           <div className="chapter__topic">
             <div className="chapter__topic-id">3.1</div>
-            <Link to="/react/hooks">React Hooks</Link>
+            <Link to="/react/Hooks">Что такое Хуки?</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">3.2</div>
-            <Link to="/react/context">Context API</Link>
+            <Link to="/react/UseState">useState - локальное состояние</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">3.3</div>
-            <Link to="/react/router">React Router</Link>
+            <Link to="/react/UseEffect">useEffect - побочные эффекты</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">3.4</div>
+            <Link to="/react/UseRef">useRef - работа с DOM</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">3.5</div>
+            <Link to="/react/AdditionalHooks">Дополнительные хуки (useContext, useReducer, useMemo)</Link>
           </div>
         </div>
 
@@ -62,31 +74,63 @@ export default function ReactPreview() {
         <div className="chapter__block">
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.1</div>
-            <Link to="/react/fetching-data">Получение данных (fetch, axios)</Link>
+            <Link to="/react/Forms">Работа с формами</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.2</div>
-            <Link to="/react/state-management">Управление состоянием (Redux, Zustand)</Link>
+            <Link to="/react/FetchingData">Получение данных (fetch, axios)</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.3</div>
-            <Link to="/react/forms">Работа с формами</Link>
+            <Link to="/react/Context">Context API - глобальное состояние</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">4.4</div>
+            <Link to="/react/StateManagement">Управление состоянием (Redux, Zustand)</Link>
           </div>
         </div>
 
-        <h3 className="chapter__block-title">5. Продвинутые темы</h3>
+        <h3 className="chapter__block-title">5. Маршрутизация и навигация</h3>
         <div className="chapter__block">
           <div className="chapter__topic">
             <div className="chapter__topic-id">5.1</div>
-            <Link to="/react/performance">Оптимизация производительности</Link>
+            <Link to="/react/RouterBasics">React Router - основы</Link>
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">5.2</div>
-            <Link to="/react/testing">Тестирование компонентов</Link>
+            <Link to="/react/RouterAdvanced">Продвинутая маршрутизация</Link>
+          </div>
+        </div>
+
+        <h3 className="chapter__block-title">6. Оптимизация и производительность</h3>
+        <div className="chapter__block">
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">6.1</div>
+            <Link to="/react/MemoOptimization">React.memo и оптимизация рендеринга</Link>
           </div>
           <div className="chapter__topic">
-            <div className="chapter__topic-id">5.3</div>
-            <Link to="/react/deployment">Деплой React-приложений</Link>
+            <div className="chapter__topic-id">6.2</div>
+            <Link to="/react/Performance">Профилирование и оптимизация производительности</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">6.3</div>
+            <Link to="/react/CodeSplitting">Разделение кода (Code Splitting)</Link>
+          </div>
+        </div>
+
+        <h3 className="chapter__block-title">7. Тестирование и деплой</h3>
+        <div className="chapter__block">
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">7.1</div>
+            <Link to="/react/Testing">Тестирование компонентов</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">7.2</div>
+            <Link to="/react/Deployment">Деплой React-приложений</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">7.3</div>
+            <Link to="/react/Lifecycle">Жизненный цикл компонентов (классы)</Link>
           </div>
         </div>
       </div>

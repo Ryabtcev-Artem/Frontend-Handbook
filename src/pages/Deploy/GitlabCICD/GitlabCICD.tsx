@@ -1,4 +1,5 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
+import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 export default function GitlabCICD() {
 
 
@@ -86,6 +87,7 @@ deploy:
       <p>
         Даже если вы не планируете быть девопсом, базовое понимание GitLab и CI/CD поможет вам эффективнее работать в команде и понимать, как устроен современный процесс разработки.
       </p>
+      <NavButtons prev={'/Deploy/Commands'} next={'/Deploy/KubernetesIntro'} />
     </section>
   )
 }

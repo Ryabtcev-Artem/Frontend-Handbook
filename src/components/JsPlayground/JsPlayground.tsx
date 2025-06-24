@@ -78,6 +78,7 @@ export default function JsPlayground(props:JsPlaygroundProps) {
           await new Promise(resolve => setTimeout(resolve, delay))
         }
         const result = eval(codeWithFunction)
+        if (answers[i])
         if (JSON.stringify(answers[i]) !== JSON.stringify(result)) {
           logs.push('❌ Ваш код не прошел проверку')
           logs.push(`input: ${examples[i]}`)

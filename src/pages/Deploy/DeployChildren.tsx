@@ -9,6 +9,7 @@ import GitIntro from "./GitIntro/GitIntro.tsx";
 import GitStructure from "./GitStructure/GitStructure.tsx";
 import GitCommands from "./GitCommands/GitCommands.tsx";
 import GitlabCICD from "./GitlabCICD/GitlabCICD.tsx";
+import KubernetesIntro from "./KubernetesIntro/KubernetesIntro.tsx";
 export const DeployChildren = [
   {path: '', element: <DeployPreview />},
   {path: 'Intro', element: <Intro />},
@@ -21,7 +22,7 @@ export const DeployChildren = [
   {path: 'GitStructure', element: <GitStructure />},
   {path: 'GitCommands', element: <GitCommands />},
   {path: 'GitlabCICD', element: <GitlabCICD />},
-  {path: 'Intro', element: <Intro />},
+  {path: 'KubernetesIntro', element: <KubernetesIntro />},
   {path: 'Intro', element: <Intro />},
   {path: 'Intro', element: <Intro />},
   {path: 'Intro', element: <Intro />},
