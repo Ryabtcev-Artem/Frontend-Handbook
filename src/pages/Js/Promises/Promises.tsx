@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type PromisesProps = {}
-export default function Promises(props: PromisesProps) {
-  const {} = props
+
+export default function Promises() {
+  
 
   return (
     <section className={'topic container'}>

@@ -3,9 +3,9 @@ import Test from "../../../components/Test/Test.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type LoopsProps = {}
-export default function Loops(props: LoopsProps) {
-  const {} = props
+
+export default function Loops() {
+  
 
   return (
     <section className={'topic container'}>

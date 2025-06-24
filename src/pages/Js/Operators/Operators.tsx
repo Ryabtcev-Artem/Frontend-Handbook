@@ -2,9 +2,9 @@ import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type OperatorsProps = {}
-export default function Operators(props: OperatorsProps) {
-  const {} = props
+
+export default function Operators() {
+  
 
   return (
     <section className="topic container">

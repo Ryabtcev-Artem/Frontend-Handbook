@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type PageRequestProps = {}
-export default function PageRequest(props: PageRequestProps) {
-  const {} = props
+
+export default function PageRequest() {
+  
 
   return (
     <section className="topic container">

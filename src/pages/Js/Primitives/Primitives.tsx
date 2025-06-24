@@ -2,9 +2,9 @@ import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type PrimitivesProps = {}
-export default function Primitives(props: PrimitivesProps) {
-  const {} = props
+
+export default function Primitives() {
+  
 
   return (
     <section className={'topic container'}>

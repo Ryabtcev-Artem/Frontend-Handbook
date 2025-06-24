@@ -1,10 +1,10 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type PrimitivesMethodsProps = {}
 
-export default function PrimitivesMethods(props: PrimitivesMethodsProps) {
-  const {} = props
+
+export default function PrimitivesMethods() {
+  
 
   return (
     <section className={'topic container'}>

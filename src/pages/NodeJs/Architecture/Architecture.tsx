@@ -2,9 +2,9 @@ import architecture from '../../../images/NodeJsImages/Architecture/architecture
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ArchitectureProps = {}
-export default function Architecture(props: ArchitectureProps) {
-  const {} = props
+
+export default function Architecture() {
+  
 
   return (
     <section className={'topic container'}>

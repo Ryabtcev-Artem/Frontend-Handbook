@@ -1,8 +1,8 @@
 import dom from '../../../images/HtmlImages/Intro/dom.jpg'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type IntroProps = {}
-export default function Intro(props: IntroProps) {
-  const {} = props
+
+export default function Intro() {
+  
 
   return (
     <section className="topic container">

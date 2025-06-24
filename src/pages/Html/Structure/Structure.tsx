@@ -1,8 +1,8 @@
 import old from '../../../images/HtmlImages/Structure/old.jpg'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type StructureProps = {}
-export default function Structure(props: StructureProps) {
-  const {} = props
+
+export default function Structure() {
+  
 
   return (
     <section className={'topic container'}>

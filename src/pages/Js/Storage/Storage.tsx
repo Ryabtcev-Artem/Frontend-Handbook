@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type StorageProps = {}
-export default function Storage(props: StorageProps) {
-  const {} = props
+
+export default function Storage() {
+  
 
   return (
     <section className={'topic container'}>

@@ -1,9 +1,9 @@
 import VsCode from '../../../components/VsCode/VsCode.tsx';
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type FileSystemProps = {}
-export default function FileSystem(props: FileSystemProps) {
-  const {} = props
+
+export default function FileSystem() {
+  
 
   return (
     <section className={'topic container'}>

@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type ExpressServerProps = {}
-export default function ExpressServer(props: ExpressServerProps) {
-  const {} = props
+
+export default function ExpressServer() {
+  
 
   return (
     <section className={'topic container'}>

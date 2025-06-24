@@ -3,9 +3,9 @@ import jsscheme from '../../../images/BrowserImages/Render/jsscheme.png'
 import jsscheme2 from '../../../images/BrowserImages/Render/jsscheme2.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import render from '../../../images/BrowserImages/Render/render.png'
-type RenderingProps = {}
-export default function Rendering(props: RenderingProps) {
-  const {} = props
+
+export default function Rendering() {
+  
 
   return (
     <section className={'topic container'}>

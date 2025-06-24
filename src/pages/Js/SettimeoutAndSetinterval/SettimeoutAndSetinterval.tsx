@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type SettimeoutAndSetintervalProps = {}
-export default function SettimeoutAndSetinterval(props: SettimeoutAndSetintervalProps) {
-  const {} = props
+
+export default function SettimeoutAndSetinterval() {
+  
 
   return (
     <section className={'topic container'}>

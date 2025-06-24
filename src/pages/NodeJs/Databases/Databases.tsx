@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type DatabasesProps = {}
-export default function Databases(props: DatabasesProps) {
-  const {} = props
+
+export default function Databases() {
+  
 
   return (
     <section className="topic container">

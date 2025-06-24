@@ -1,9 +1,9 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
-type StringsProps = {}
-export default function Strings(props: StringsProps) {
-  const {} = props
+
+export default function Strings() {
+  
 
   return (
     <section className={'topic container'}>

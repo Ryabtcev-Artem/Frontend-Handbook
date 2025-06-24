@@ -5,10 +5,10 @@ import conception3 from '../../../images/InternetImages/RestApi/conception3.png'
 import conception4 from '../../../images/InternetImages/RestApi/conception4.png'
 import conception5 from '../../../images/InternetImages/RestApi/conception5.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type RestApi1Props = {}
 
-export default function RestApi(props: RestApi1Props) {
-  const {} = props
+
+export default function RestApi() {
+  
 
   return (
     <section className="topic container">

@@ -5,7 +5,7 @@ import React from "react";
 type VsCodeProps = {
   children: React.ReactNode,
 }
-export default function VsCode(props: VsCodeProps) {
+export default function VsCode(props:VsCodeProps) {
   const {children} = props
   const currentTheme = localStorage.getItem('user-theme')
   return (

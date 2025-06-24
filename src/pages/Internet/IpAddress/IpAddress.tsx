@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type IpAdressProps = {}
-export default function IpAddress(props: IpAdressProps) {
-  const {} = props
+
+export default function IpAddress() {
+  
 
   return (
     <section className="topic container">

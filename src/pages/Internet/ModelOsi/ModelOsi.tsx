@@ -4,10 +4,10 @@ import conferention from '../../../images/InternetImages/ModelOsi/conferention.j
 import model from '../../../images/InternetImages/ModelOsi/model.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type OsiModelProps = {}
 
-export default function OsiModel(props: OsiModelProps) {
-  const {} = props
+
+export default function OsiModel() {
+  
   return (
     <section className="topic container">
       <h2>Модель OSI: 7 уровней, как работает интернет</h2>

@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
+import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type SetupProps = {}
-export default function Setup(props: SetupProps) {
-  const {} = props
+export default function Setup() {
+  
 
   return (
     <section className={'topic container'}>
@@ -37,7 +37,21 @@ export default function Setup(props: SetupProps) {
 
       <h3>Шаг 3. Основы использования npm</h3>
       <p>npm — это менеджер пакетов, с помощью которого можно устанавливать сторонние библиотеки и управлять зависимостями вашего проекта.</p>
-      <p>Основные команды:</p>
+      <h4>Почему вообще библиотеки называют зависимостями?</h4>
+      <p>
+        Потому что ваше приложение <strong>зависит</strong> от них, чтобы работать.
+        Представьте:
+        Вы пишете сайт. Чтобы не изобретать велосипед, вы ставите библиотеку:</p>
+        <VsCode>npm install axios</VsCode>
+      <p>
+        Теперь ваш код использует axios для отправки запросов. То есть:
+
+        Без этой библиотеки — сайт не заработает.
+
+        Она нужна каждый раз при запуске.
+
+        Это и есть <strong>зависимость</strong> — ваш код <strong>зависит</strong> от стороннего кода.</p>
+      <p>Основные команды npm:</p>
       <ul>
         <li><code>npm init</code> — инициализация нового проекта. Создаёт файл <code>package.json</code> с основными настройками.</li>
         <li><code>npm install &lt;package&gt;</code> — установка пакета (например, <code>npm install express</code>).</li>

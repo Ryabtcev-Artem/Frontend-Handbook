@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type CurryProps = {}
-export default function Curry(props: CurryProps) {
-  const {} = props
+
+export default function Curry() {
+  
   return (
     <section className={'topic container'}>
       <h2>Каррирование (Currying)</h2>

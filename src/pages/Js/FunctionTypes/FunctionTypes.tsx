@@ -3,9 +3,9 @@ import Test from "../../../components/Test/Test.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type FunctionTypesProps = {}
-export default function FunctionTypes(props: FunctionTypesProps) {
-  const {} = props
+
+export default function FunctionTypes() {
+  
 
   return (
     <section className={'topic container'}>

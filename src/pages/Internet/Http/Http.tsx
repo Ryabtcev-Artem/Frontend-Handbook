@@ -1,8 +1,8 @@
 import clientserver from '../../../images/InternetImages/Http/clientserver.jpg'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type httpProps = {}
-export default function http(props: httpProps) {
-  const {} = props
+
+export default function http() {
+  
 
   return (
     <section className={"topic container"}>

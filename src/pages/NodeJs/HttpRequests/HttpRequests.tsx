@@ -1,9 +1,9 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type HttpRequestsProps = {}
-export default function HttpRequests(props: HttpRequestsProps) {
-  const {} = props
+
+export default function HttpRequests() {
+  
 
   return (
     <section className="topic container">

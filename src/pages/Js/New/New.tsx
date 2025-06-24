@@ -1,9 +1,9 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type NewProps = {}
-export default function New(props: NewProps) {
-  const {} = props
+
+export default function New() {
+  
 
   return (
     <section className={'topic container'}>

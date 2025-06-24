@@ -1,9 +1,9 @@
 import VsCode from '../../../components/VsCode/VsCode.tsx';
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ModulesProps = {}
-export default function Modules(props: ModulesProps) {
-  const {} = props
+
+export default function Modules() {
+  
 
   return (
     <section className={'topic container'}>

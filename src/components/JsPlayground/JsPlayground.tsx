@@ -7,13 +7,13 @@ type JsPlaygroundProps = {
   defaultCode: string,
   title: string,
   description: string,
-  answers: any,
+  answers: unknown[][],
   functionName: string,
   examples: string[],
   taskId: number,
   delay?: number,
 }
-export default function JsPlayground(props: JsPlaygroundProps) {
+export default function JsPlayground(props:JsPlaygroundProps) {
   const {
     taskId,
     examples,
@@ -39,14 +39,16 @@ export default function JsPlayground(props: JsPlaygroundProps) {
     if (savedCode) {
       setCode(savedCode)
     }
-  }, []);
-  const saveCodeById = (value: any) => {
-    localStorage.setItem(`taskCode${taskId}`, value)
+  }, [taskId]);
+  const saveCodeById = (value: unknown) => {
+    if (typeof value === 'string'){
+      localStorage.setItem(`taskCode${taskId}`, value)
+    }
   }
   const runCode = async () => {
     const logs: string[] = [];
     const originalLog = console.log;
-    console.log = (...args: any[]) => {
+    console.log = (...args: unknown[]) => {
       logs.push(args.map(String).join(" "));
     };
     try {
@@ -65,7 +67,7 @@ export default function JsPlayground(props: JsPlaygroundProps) {
   const checkCode = async () => {
     const logs: string[] = [];
     const originalLog = console.log;
-    console.log = (...args: any[]) => {
+    console.log = (...args: unknown[]) => {
       logs.push(args.map(String).join(" "));
     };
     let codeWithFunction = ''

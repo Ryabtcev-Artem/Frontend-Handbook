@@ -1,9 +1,9 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type FetchProps = {}
-export default function Fetch(props: FetchProps) {
-  const {} = props
+
+export default function Fetch() {
+  
 
   return (
     <section className={'topic container'}>

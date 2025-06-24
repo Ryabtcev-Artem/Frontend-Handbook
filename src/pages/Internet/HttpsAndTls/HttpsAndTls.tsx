@@ -1,9 +1,9 @@
 import maninthemiddle from '../../../images/InternetImages/HttpsAndTls/maninthemiddle.png'
 import saif from "../../../images/InternetImages/HttpsAndTls/saif.webp"
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type HttpsAndTlsProps = {}
-export default function HttpsAndTls(props: HttpsAndTlsProps) {
-  const {} = props
+
+export default function HttpsAndTls() {
+  
 
   return (
     <section className="topic container">

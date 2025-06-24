@@ -1,6 +1,6 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type How_does_the_internet_workProps = {}
+
 import internetSchema1
   from '../../../images/InternetImages/HowInternetWork/internet-schema-1.png'
 import internetSchema2
@@ -16,8 +16,8 @@ import internetSchema6
 import internetSchema7
   from '../../../images/InternetImages/HowInternetWork/internet-schema-7.png'
 
-export default function HowInternetWork(props: How_does_the_internet_workProps) {
-  const {} = props
+export default function HowInternetWork() {
+  
   return (
 
     <section className={'topic container'}>

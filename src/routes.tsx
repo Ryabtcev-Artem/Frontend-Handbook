@@ -14,6 +14,8 @@ import NodeJs from "./pages/NodeJs/NodeJs.tsx";
 import {NodeJsChildren} from "./pages/NodeJs/NodeJsChildren.tsx";
 import React from "./pages/React/React.tsx";
 import {ReactChildren} from "./pages/React/ReactChildren.tsx";
+import Deploy from "./pages/Deploy/Deploy.tsx";
+import {DeployChildren} from "./pages/Deploy/DeployChildren.tsx";
 export const routes = [
   {
     path: '/',
@@ -57,5 +59,10 @@ export const routes = [
     path: '/react',
     element: <React />,
     children: ReactChildren,
+  },
+  {
+    path: '/deploy',
+    element: <Deploy />,
+    children: DeployChildren,
   }
 ]

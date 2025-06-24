@@ -1,9 +1,9 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 // import clientserver from '../../../images/InternetImages/Intro/clientserver.png'
 
-type IntroProps = {}
-export default function Intro(props: IntroProps) {
-  const {} = props
+
+export default function Intro() {
+  
   return (
     <section className={'topic container'}>
       <h2>Введение в веб-разработку</h2>

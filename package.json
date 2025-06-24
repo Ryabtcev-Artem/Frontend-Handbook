@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ci:lint": "npm run lint",
+    "ci:build": "npm run build",
+    "ci:test": "echo \"No tests yet\""
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",

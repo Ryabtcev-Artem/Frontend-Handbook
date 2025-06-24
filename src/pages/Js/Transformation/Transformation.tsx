@@ -1,9 +1,9 @@
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
-type TransformationProps = {}
-export default function Transformation(props: TransformationProps) {
-  const {} = props
+
+export default function Transformation() {
+  
 
   return (
     <section className={'topic container'}>

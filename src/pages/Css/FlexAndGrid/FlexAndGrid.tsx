@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type FlexAndGridProps = {}
-export default function FlexAndGrid(props: FlexAndGridProps) {
-  const {} = props
+
+export default function FlexAndGrid() {
+  
 
   return (
     <section className={'topic container'}>

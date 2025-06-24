@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type GeneratorsProps = {}
-export default function Generators(props: GeneratorsProps) {
-  const {} = props
+
+export default function Generators() {
+  
 
   return (
     <section className="topic container">

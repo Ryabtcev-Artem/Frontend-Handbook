@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./NotFound.scss"
-type NotFoundProps = {}
 
-export default function NotFound(props: NotFoundProps) {
-  const {} = props;
+
+export default function NotFound() {
+  ;
 
   return (
     <section className="not-found">

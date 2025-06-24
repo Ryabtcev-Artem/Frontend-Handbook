@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type ClassesProps = {}
-export default function Classes(props: ClassesProps) {
-  const {} = props
+
+export default function Classes() {
+  
 
   return (
     <section className={'topic container'}>

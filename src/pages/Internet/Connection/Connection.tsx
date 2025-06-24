@@ -4,10 +4,10 @@ import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import cabels from '../../../images/InternetImages/Connection/cabels.png'
 import skytower from '../../../images/InternetImages/Connection/skytower.jpg'
 
-type ConnectionProps = {}
 
-export default function Connection(props: ConnectionProps) {
-  const {} = props
+
+export default function Connection() {
+  
   return (
     <section className={'topic container'}>
       <h2 className={'topic__title'}>Как устроено подключение к Интернету?</h2>

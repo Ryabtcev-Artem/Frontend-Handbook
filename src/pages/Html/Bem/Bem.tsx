@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type BemProps = {}
-export default function Bem(props: BemProps) {
-  const {} = props
+
+export default function Bem() {
+  
 
   return (
     <section className={'topic container'}>

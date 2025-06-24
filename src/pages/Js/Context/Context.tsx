@@ -3,10 +3,10 @@ import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
 
 
-type ContextProps = {}
 
-export default function Context(props: ContextProps) {
-  const {} = props
+
+export default function Context() {
+  
 
   return (
     <section className={'topic container'}>

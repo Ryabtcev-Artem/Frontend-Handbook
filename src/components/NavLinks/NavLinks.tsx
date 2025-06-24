@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 type NavLinksProps = {
   onBurgerMenuClick: () => void;
 }
-export default function NavLinks(props: NavLinksProps) {
+export default function NavLinks(props:NavLinksProps) {
   const {onBurgerMenuClick} = props
 
   return (

@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type AsyncBasicsProps = {}
-export default function AsyncBasics(props: AsyncBasicsProps) {
-  const {} = props
+
+export default function AsyncBasics() {
+  
 
   return (
     <section className="topic container">

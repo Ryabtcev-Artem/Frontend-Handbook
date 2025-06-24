@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ConnectionProps = {}
-export default function Connection(props: ConnectionProps) {
-  const {} = props
+
+export default function Connection() {
+  
 
   return (
     <section className={'topic container'}>

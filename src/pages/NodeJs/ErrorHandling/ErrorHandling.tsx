@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
 
-type ErrorHandlingProps = {}
-export default function ErrorHandling(props: ErrorHandlingProps) {
-  const {} = props
+
+export default function ErrorHandling() {
+  
 
   return (
     <section className="topic container">

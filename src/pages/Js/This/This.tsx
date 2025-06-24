@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
 
-type ThisProps = {}
-export default function This(props: ThisProps) {
-  const {} = props
+
+export default function This() {
+  
 
   return (
     <section className={`topic container`}>

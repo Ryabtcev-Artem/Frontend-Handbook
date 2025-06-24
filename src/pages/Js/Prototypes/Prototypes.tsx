@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type PrototypesProps = {}
-export default function Prototypes(props: PrototypesProps) {
-  const {} = props
+
+export default function Prototypes() {
+  
 
   return (
     <section className={`topic container`}>
@@ -190,7 +190,7 @@ console.log(obj.greet());`,
           {
             question: "Какой результат выполнения кода?",
             isCode: true,
-            code: `const a = {};
+            code: `const a = Record<string, never>;
 console.log(a.__proto__ === Object.prototype);`,
             variants: [
               "true",
@@ -229,7 +229,7 @@ console.log(Object.getPrototypeOf(Foo));`,
           {
             question: "Что будет результатом этого кода?",
             isCode: true,
-            code: `const a = {};
+            code: `const a = Record<string, never>;
 const b = Object.create(a);
 
 console.log(b.__proto__ === a);`,
@@ -362,7 +362,7 @@ console.log(dog.legs);`,
           {
             question: "Какой результат?",
             isCode: true,
-            code: `const obj = {};
+            code: `const obj = Record<string, never>;
 obj.__proto__ = null;
 
 console.log(Object.getPrototypeOf(obj));`,

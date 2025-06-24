@@ -3,9 +3,9 @@ import diff from '../../../images/JsImages/Arrow/diff.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
 
-type ArrowProps = {}
-export default function Arrow(props: ArrowProps) {
-  const {} = props
+
+export default function Arrow() {
+  
 
   return (
     <section className="topic container">

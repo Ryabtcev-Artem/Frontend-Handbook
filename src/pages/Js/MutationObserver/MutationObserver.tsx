@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type MutationObserverProps = {}
-export default function MutationObserver(props: MutationObserverProps) {
-  const {} = props
+
+export default function MutationObserver() {
+  
 
   return (
     <section className={'topic container'}>

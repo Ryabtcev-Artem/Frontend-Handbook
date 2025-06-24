@@ -1,8 +1,8 @@
 import './Welcome.scss'
 import {Link} from "react-router-dom";
-type WelcomeProps = {}
-export default function Welcome(props: WelcomeProps) {
-  const {} = props
+
+export default function Welcome() {
+  
 
   return (
     <section

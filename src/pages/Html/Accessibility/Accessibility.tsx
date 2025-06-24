@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type AccessibilityProps = {}
-export default function Accessibility(props: AccessibilityProps) {
-  const {} = props
+
+export default function Accessibility() {
+  
 
   return (
     <section className={'topic container'}>

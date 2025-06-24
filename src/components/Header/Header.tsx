@@ -6,14 +6,14 @@ import {useEffect, useRef, useState} from "react";
 import {allPages} from "../../allPages.ts";
 import getScrollbarWidth from "../../helpers/getScrollbarWidth.ts";
 import toggleTheme from "../../toggleTheme.ts";
-import NavLinks from "../NavLinks/NavLinks.tsx"; {}
+import NavLinks from "../NavLinks/NavLinks.tsx";
 import moon from '../../images/Header/moon.svg'
 import sun from '../../images/Header/sun.svg'
 
 
-type HeaderProps = {}
-export default function Header(props: HeaderProps) {
-  const {} = props
+
+export default function Header() {
+  
   const [searchValue, setSearchValue] = useState('')
   const searchInputElement = useRef<HTMLInputElement | null>(null)
   const searchElement = useRef<HTMLDivElement | null>(null)
@@ -72,7 +72,7 @@ export default function Header(props: HeaderProps) {
   useEffect(() => {
     window.addEventListener('click', onWindowClick)
     return ()=> window.removeEventListener('click',onWindowClick)
-  }, []);
+  });
 
   function onBurgerMenuClick() {
     if (!burgerMenuElement.current || !headerMenuElement.current) {

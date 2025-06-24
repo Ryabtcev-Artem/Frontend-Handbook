@@ -2,9 +2,9 @@ import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type HoistingProps = {}
-export default function Hoisting(props: HoistingProps) {
-  const {} = props
+
+export default function Hoisting() {
+  
 
   return (
     <section className={'topic container'}>

@@ -2,10 +2,10 @@ import VsCode from "../../../components/VsCode/VsCode.tsx"
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 
-type MapAndSetProps = {}
 
-export default function MapAndSet(props: MapAndSetProps) {
-  const {} = props
+
+export default function MapAndSet() {
+  
 
   return (
     <section className={'topic container'}>
@@ -70,7 +70,7 @@ console.log(set); // Set(2) {1, 2}`}</VsCode>
 
       <h3>Примеры сравнения</h3>
       <p>Map допускает любой тип ключей, в отличие от объектов:</p>
-      <VsCode>{`const obj = {};
+      <VsCode>{`const obj = Record<string, never>;
 const map = new Map();
 map.set(obj, "значение");
 console.log(map.get(obj)); // "значение"`}</VsCode>

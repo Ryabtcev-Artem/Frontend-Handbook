@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type LocalAndSessionProps = {}
-export default function LocalAndSession(props: LocalAndSessionProps) {
-  const {} = props
+
+export default function LocalAndSession() {
+
 
   return (
     <section className={'topic container'}>

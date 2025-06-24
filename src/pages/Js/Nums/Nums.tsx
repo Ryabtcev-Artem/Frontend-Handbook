@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type NumsProps = {}
-export default function Nums(props: NumsProps) {
-  const {} = props
+
+export default function Nums() {
+  
 
   return (
     <section className={'topic container'}>

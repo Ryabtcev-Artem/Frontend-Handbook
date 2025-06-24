@@ -1,8 +1,8 @@
 import viewport from '../../../images/HtmlImages/Meta/viewport.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type MetaProps = {}
-export default function Meta(props: MetaProps) {
-  const {} = props
+
+export default function Meta() {
+  
 
   return (
     <section className="topic container">

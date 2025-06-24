@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type TimersProps = {}
-export default function Timers(props: TimersProps) {
-  const {} = props
+
+export default function Timers() {
+  
 
   return (
     <section className="topic container">

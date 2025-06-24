@@ -1,9 +1,9 @@
 // import example from '../../../images/HtmlImages/Semantic/example.png'
 import semantic from '../../../images/HtmlImages/Semantic/semantic.webp'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type SemanticProps = {}
-export default function Semantic(props: SemanticProps) {
-  const {} = props
+
+export default function Semantic() {
+  
 
   return (
     <section className={'topic container'}>

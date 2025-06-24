@@ -1,8 +1,8 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type DataParsingProps = {}
-export default function DataParsing(props: DataParsingProps) {
-  const {} = props
+
+export default function DataParsing() {
+  
 
   return (
     <section className="topic container">

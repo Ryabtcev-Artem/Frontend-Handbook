@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import websocketvshttp from '../../../images/InternetImages/WebSocket/websocketvshttp.png'
-type WebSocketProps = {}
-export default function WebSocket(props: WebSocketProps) {
-  const {} = props
+
+export default function WebSocket() {
+  
 
   return (
     <section className={'topic container'}>

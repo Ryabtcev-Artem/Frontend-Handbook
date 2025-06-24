@@ -2,10 +2,10 @@ import VsCode from "../../../components/VsCode/VsCode.tsx"
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ArraysProps = {}
 
-export default function Arrays(props: ArraysProps) {
-  const {} = props
+
+export default function Arrays() {
+  
 
   return (
     <section className={'topic container'}>

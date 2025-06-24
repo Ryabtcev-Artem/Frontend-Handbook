@@ -2,9 +2,9 @@ import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ClosuresProps = {}
-export default function Closures(props: ClosuresProps) {
-  const {} = props
+
+export default function Closures() {
+  
 
   return (
     <section className="topic container">

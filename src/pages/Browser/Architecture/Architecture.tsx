@@ -1,9 +1,9 @@
 import canvas from '../../../images/BrowserImages/Architecture/canvas.png'
 
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type HowBrowserWorkProps = {}
-export default function Architecture(props: HowBrowserWorkProps) {
-  const {} = props
+
+export default function Architecture() {
+  
   return (
     <section className="topic container">
       <h2>Архитектура браузера</h2>

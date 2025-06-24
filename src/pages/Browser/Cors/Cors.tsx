@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type CorsProps = {}
-export default function Cors(props: CorsProps) {
-  const {} = props
+
+export default function Cors() {
+  
 
   return (
     <section className={'topic container'}>

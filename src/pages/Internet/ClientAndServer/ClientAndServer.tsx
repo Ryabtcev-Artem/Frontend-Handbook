@@ -1,9 +1,9 @@
 import clientserver from '../../../images/InternetImages/ClientAndServer/clientserver.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type ClientAndServerProps = {}
 
-export default function ClientAndServer(props: ClientAndServerProps) {
-  const {} = props
+
+export default function ClientAndServer() {
+  
 
   return (
     <section className="topic container">

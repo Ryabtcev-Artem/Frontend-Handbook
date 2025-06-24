@@ -1,10 +1,10 @@
 import graphqlvsrest from '../../../images/InternetImages/GraphQl/graphqlvsrest.jpeg'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type GraphQlProps = {};
+;
 
 
-export default function GraphQl(props: GraphQlProps) {
-  const {} = props
+export default function GraphQl() {
+  
   return (
     <section className="topic container">
       <h2>Что такое GraphQL?</h2>

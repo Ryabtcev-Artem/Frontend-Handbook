@@ -1,9 +1,9 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type EventLoopProps = {}
-export default function EventLoop(props: EventLoopProps) {
-  const {} = props
+
+export default function EventLoop() {
+  
 
   return (
     <section className="topic container">

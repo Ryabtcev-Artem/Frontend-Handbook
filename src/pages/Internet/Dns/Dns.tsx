@@ -1,9 +1,9 @@
 import youtube from '../../../images/InternetImages/Dns/youtube.webp'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-type DnsProps = {}
 
-export default function Dns(props: DnsProps) {
-  const {} = props
+
+export default function Dns() {
+  
 
   return (
     <section className="topic container">

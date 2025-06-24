@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type CookiesProps = {}
-export default function Cookies(props: CookiesProps) {
-  const {} = props
+
+export default function Cookies() {
+  
 
   return (
     <section className={'topic container'}>

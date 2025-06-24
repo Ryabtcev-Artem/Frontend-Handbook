@@ -3,9 +3,9 @@ import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 
-type ObjectsProps = {}
-export default function Objects(props: ObjectsProps) {
-  const {} = props
+
+export default function Objects() {
+  
 
   return (
     <section className={'topic container'}>
@@ -147,7 +147,7 @@ console.log(original.a)  // 1
             question: "Какой способ создаёт пустой объект?",
             variants: [
               "const obj = []",
-              "const obj = {}",
+              "const obj = Record<string, never>",
               "const obj = createObject()",
               "const obj = null"
             ],

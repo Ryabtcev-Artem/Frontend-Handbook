@@ -1,9 +1,9 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type BlockingAndNonblockingIoProps = {}
-export default function BlockingAndNonblockingIo(props: BlockingAndNonblockingIoProps) {
-  const {} = props
+
+export default function BlockingAndNonblockingIo() {
+  
 
   return (
     <section className={'topic container'}>

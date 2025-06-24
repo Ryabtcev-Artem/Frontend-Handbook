@@ -2,10 +2,10 @@ import table from '../../../images/InternetImages/ModelTcpIp/table.png'
 import model from '../../../images/InternetImages/ModelTcpIp/model.png'
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type ModelTcpIpProps = {}
 
-export default function ModelTcpIp(props: ModelTcpIpProps) {
-  const {} = props
+
+export default function ModelTcpIp() {
+  
 
   return (
     <section className="topic container">

@@ -3,9 +3,9 @@ import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
-type SwitchProps = {}
-export default function Switch(props: SwitchProps) {
-  const {} = props
+
+export default function Switch() {
+  
 
   return (
     <section className={'topic container'}>

@@ -2,9 +2,9 @@ import {Link} from "react-router-dom";
 import ChapterPreview
   from "../../components/ChapterPreview/ChapterPreview.tsx";
 
-type InternetPreviewProps = {}
-export default function InternetPreview(props: InternetPreviewProps) {
-  const {} = props
+
+export default function InternetPreview() {
+  
   return (
     <section className={'chapter'}>
       <ChapterPreview

@@ -1,8 +1,8 @@
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 import privatebrowsers from '../../../images/BrowserImages/Intro/private.png'
-type IntroProps = {}
-export default function Intro(props: IntroProps) {
-  const {} = props
+
+export default function Intro() {
+  
 
   return (
     <section className="topic container">

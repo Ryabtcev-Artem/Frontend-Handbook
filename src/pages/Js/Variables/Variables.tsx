@@ -1,9 +1,9 @@
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
-type VariablesProps = {}
-export default function Variables(props: VariablesProps) {
-  const {} = props
+
+export default function Variables() {
+  
 
   return (
     <section className={'topic container'}>
