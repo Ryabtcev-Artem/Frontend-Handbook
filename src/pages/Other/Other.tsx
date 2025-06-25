@@ -115,7 +115,7 @@ export default function Other() {
       <div className="other__pages">
         <Link
           className={'other__page'}
-          to={'/jsPractice'}
+          to={'/js-practice'}
         >
           <div className="other__picture-container">
             <img

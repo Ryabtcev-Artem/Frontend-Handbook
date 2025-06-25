@@ -1,5 +1,4 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 export default function Fetch() {
@@ -84,35 +83,6 @@ export default function Fetch() {
         <li>результат нужно парсить, например через <code>.json()</code>;</li>
         <li>синтаксис <code>async/await</code> делает код чище и понятнее.</li>
       </ul>
-      <NavButtons prev={'/js/Promises'} next={'/js/Classes'} />
-      <JsPlayground
-        taskId={8}
-        functionName={'getUserNames'}
-        answers={[
-          [
-            "Leanne Graham",
-            "Ervin Howell",
-            "Clementine Bauch",
-            "Patricia Lebsack",
-            "Chelsey Dietrich",
-            "Mrs. Dennis Schulist",
-            "Kurtis Weissnat",
-            "Nicholas Runolfsdottir V",
-            "Glenna Reichert",
-            "Clementina DuBuque"
-          ]
-        ]}
-        defaultCode={`async function getUserNames() {
-  fetch("https://jsonplaceholder.typicode.com/users")
-}`}
-        title={'Задача: Получение имени пользователя через fetch'}
-        description={`Реализуйте асинхронную функцию getUserNames(), которая отправляет GET-запрос на https://jsonplaceholder.typicode.com/users
-и возвращает массив объектов с информацией о пользователях, верните массив всех полей "username" в этих объектах.`}
-        examples={[
-          `getUserNames() \n// Ожидаемый результат: ["Leanne Graham","Ervin Howell","Clementine Bauch", ...]`,
-        ]}
-        delay={500}
-      />
       <NavButtons prev={'/js/Promises'} next={'/js/Classes'} />
     </section>
   )

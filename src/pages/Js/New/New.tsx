@@ -1,5 +1,4 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 export default function New() {
@@ -99,30 +98,6 @@ const h2 = Human("Eve");    // ❌ TypeError`}</VsCode>
         <li>Без <code>new</code> функция-конструктор не создаёт объект, и <code>this</code> указывает не туда</li>
         <li>С <code>class</code> оператор <code>new</code> обязателен</li>
       </ul>
-      <NavButtons prev={'/js/Prototypes'} next={'/js/PrimitivesMethods'} />
-      <JsPlayground
-        taskId={6}
-        functionName={'myNew'}
-        answers={[
-          { age: 30, name: "Alice" },
-          { make: "Toyota", model: "Camry" },
-          { x: 10, y: 20 },
-        ]}
-        defaultCode={`function myNew(constructorFn, argsArray) {
-
-}`}
-        title={'Задача: Пишем свою функцию new'}
-        description={'Оператор new создаёт объект, связывает его с прототипом и вызывает функцию конструктора. В этой задаче вам нужно вручную реализовать поведение new. Возвращать нужно объект.'}
-        examples={[
-          `myNew(function User(age, name) {\n  this["age"] = age;\n  this["name"] = name;\n}, [30, "Alice"]) \n// Ожидаемый результат: {"age":30,"name":"Alice"}`,
-
-          `myNew(function Car(make, model) {\n  this["make"] = make;\n  this["model"] = model;\n}, ["Toyota", "Camry"]) \n// Ожидаемый результат: {"make":"Toyota","model":"Camry"}`,
-
-          `myNew(function Point(x, y) {\n  this["x"] = x;\n  this["y"] = y;\n}, [10, 20]) \n// Ожидаемый результат: {"x":10,"y":20}`
-        ]
-        }
-
-      />
       <NavButtons prev={'/js/Prototypes'} next={'/js/PrimitivesMethods'} />
     </section>
   )

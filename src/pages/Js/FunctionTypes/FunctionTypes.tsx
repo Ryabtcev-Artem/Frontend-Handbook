@@ -1,6 +1,5 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 
@@ -176,30 +175,6 @@ const test = () => 1`
           }
         ]}
       />
-      <JsPlayground
-        taskId={3}
-        functionName={'fibonacciSequence'}
-        answers={[
-          [0],
-          [0, 1],
-          [0, 1, 1, 2, 3, 5],
-          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55],
-        ]}
-        defaultCode={`function fibonacciSequence(n) {
-
-}`}
-        title={'Задача: Рекурсивное построение массива чисел Фибоначчи'}
-        examples={[
-          'fibonacciSequence(0) \n// Ожидаемый результат: [0]',
-          'fibonacciSequence(1) \n// Ожидаемый результат: [0, 1]',
-          'fibonacciSequence(5) \n// Ожидаемый результат: [0, 1, 1, 2, 3, 5]',
-        ]}
-        description={
-          'Реализуйте функцию fibonacciSequence, которая принимает число n и возвращает массив чисел Фибоначчи от 0 до n включительно, используя рекурсию. Числа Фибоначчи - это числовая последовательность, в которой каждое число равно сумме двух предыдущих.'
-        }
-      />
-
-
 
       <NavButtons prev={'/js/Loops'} next={'/js/Closures'} />
     </section>

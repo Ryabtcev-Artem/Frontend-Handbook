@@ -68,7 +68,7 @@ export const routes = [
     children: DeployChildren,
   },
   {
-    path: '/jsPractice',
+    path: '/js-practice',
     element: <JsPractice />,
     children: JsPracticeChildren,
   }

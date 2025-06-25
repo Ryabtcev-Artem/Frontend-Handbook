@@ -1,7 +1,6 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 
 
 export default function Objects() {
@@ -224,25 +223,6 @@ console.log(obj.a);`,
             ],
             correct: 1
           }
-        ]}
-      />
-    <JsPlayground
-        taskId={5}
-        functionName={'getAdults'}
-        answers={[
-          { bob: 22, charlie: 30 },
-          { mike: 18 },
-          { max: 20 }
-        ]}
-        defaultCode={`function getAdults(people) {
-        
-}`}
-        title={'Задача: Фильтруем совершеннолетних'}
-        description={'Функция getAdults получает объект people, где ключ — имя человека, а значение — его возраст. Нужно вернуть новый объект, в котором останутся только те, у кого возраст 18 или больше.'}
-        examples={[
-          'getAdults({ alice: 17, bob: 22, charlie: 30 }) \n// Ожидаемый результат: { bob: 22, charlie: 30 }',
-          'getAdults({ anna: 15, mike: 18 }) \n// Ожидаемый результат: { mike: 18 }',
-          'getAdults({ john: 12, jane: 16, max: 20 }) \n// Ожидаемый результат: { max: 20 }',
         ]}
       />
       <NavButtons prev={'/js/Generators'} next={'/js/Context'} />

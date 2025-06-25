@@ -1,7 +1,5 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx"
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
-
 
 
 export default function MapAndSet() {
@@ -94,26 +92,6 @@ console.log(unique); // [1, 2, 3]`}</VsCode>
         <li><code>Set</code> — уникальные значения с быстрым доступом и поддержкой итераций.</li>
         <li>Подходят для продвинутых структур данных, кешей, списков без повторов и т.д.</li>
       </ul>
-      <NavButtons prev={'/js/Arrays'} next={'/js/SettimeoutAndSetinterval'} />
-      <JsPlayground
-        defaultCode={`function unique(arr) {
-  
-}`}
-        title={'Удаление дубликатов с помощью Set'}
-        description={'Напишите функцию, которая удаляет дубликаты из массива, сохраняя порядок элементов.'}
-        functionName={'unique'}
-        answers={[
-          [1, 2, 3, 4, 5],
-          ['a', 'b', 'c'],
-          [true, false]
-        ]}
-        examples={[
-          `unique([1, 2, 2, 3, 4, 4, 5]) \n// Ожидаемый результат: [1, 2, 3, 4, 5]`,
-          `unique(["a", "b", "a", "c", "b"]) \n// Ожидаемый результат: ["a", "b", "c"]`,
-          `unique([true, false, true]) \n// Ожидаемый результат: [true, false]`
-        ]}
-        taskId={7}
-      />
       <NavButtons prev={'/js/Arrays'} next={'/js/SettimeoutAndSetinterval'} />
     </section>
   )

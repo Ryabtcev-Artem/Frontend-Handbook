@@ -1,5 +1,4 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 
@@ -115,31 +114,6 @@ console.log(curriedSum(1, 2, 3));     // 6`}</VsCode>
         Каррирование названо в честь математика Хаскелла Карри. В JavaScript его можно реализовать вручную,
         либо использовать готовые решения из библиотек, например, <code>_.curry</code> из Lodash.
       </p>
-      <NavButtons prev={'/js/Closures'} next={'/js/Arrow'} />
-       <JsPlayground
-        taskId={4}
-        functionName={'multiplyCurry'}
-        answers={[
-          24,
-          2,
-          5,
-          16,
-        ]}
-        defaultCode={`function multiplyCurry(...args) {
-
-}`}
-        title={'Задача: Свой карри для перемножения'}
-        description={`Реализуйте функцию multiplyCurry, которая может принимать любое количество чисел на каждом этапе вызова, 
-накапливать их и возвращать произведение всех чисел, когда вызвана без аргументов.
-
-Функция должна быть гибкой — принимать аргументы как по одному, так и группами. Финальный вызов без аргументов завершает цепочку и возвращает результат.`}
-        examples={[
-          'multiplyCurry()(2)(3)(4)() \n// Ожидаемый результат: 24',
-          'multiplyCurry()(1, 2)(1)() \n// Ожидаемый результат: 2',
-          'multiplyCurry()(5)() \n// Ожидаемый результат: 5',
-          'multiplyCurry()(2)(2, 2)(2)() \n// Ожидаемый результат: 16',
-        ]}
-      />
       <NavButtons prev={'/js/Closures'} next={'/js/Arrow'} />
     </section>
   )

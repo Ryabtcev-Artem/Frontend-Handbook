@@ -1,5 +1,5 @@
 import './NavButtons.scss'
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 type NavButtonsProps = {
   prev:string,
@@ -7,7 +7,7 @@ type NavButtonsProps = {
 }
 export default function NavButtons(props: NavButtonsProps) {
   const {prev,next} = props
-
+  const isPractice = useLocation().pathname.includes('practice')
   return (
     <div
       className="nav-buttons"
@@ -16,13 +16,14 @@ export default function NavButtons(props: NavButtonsProps) {
         to={prev}
         className={'nav-buttons__prev'}
       >
-        Предыдущий урок
+      {isPractice ? 'Предыдущая задача' : 'Предыдущий урок'}
+
       </Link>
       <Link
         to={next}
         className={'nav-buttons__next'}
       >
-        Следующий урок
+        {isPractice ? 'Следующая задача' : 'Следующий урок'}
       </Link>
     </div>
   )

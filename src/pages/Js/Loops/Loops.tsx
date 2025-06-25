@@ -1,6 +1,5 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import Test from "../../../components/Test/Test.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
 
 
@@ -301,21 +300,6 @@ console.log(i);`,
             isCode: true
           }
         ]}
-      />
-      <JsPlayground
-        taskId={2}
-        functionName={'countEven'}
-        answers={[3, 2, 0]}
-        defaultCode={'function countEven(numbers){\n  \n}'}
-        title={'Задача: Считаем чётные числа'}
-        examples={[
-          'countEven([1, 2, 3, 4, 5, 6]) \n// Ожидаемый результат: 3',
-          'countEven([10, 15, 20]) \n// Ожидаемый результат: 2',
-          'countEven([7, 9, 11]) \n// Ожидаемый результат: 0'
-        ]}
-        description={
-          'В функции countEven вам передаётся массив чисел numbers. Нужно сосчитать, сколько в этом массиве чётных чисел, и вернуть это количество. Используйте любой цикл: for, for...of или while.'
-        }
       />
       <NavButtons prev={'/js/Switch'} next={'/js/FunctionTypes'} />
     </section>

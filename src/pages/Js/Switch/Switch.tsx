@@ -1,6 +1,5 @@
 import Test from "../../../components/Test/Test.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
-import JsPlayground from "../../../components/JsPlayground/JsPlayground.tsx";
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 
 
@@ -151,15 +150,6 @@ switch (x) {
           explanations: ["Если совпадение найдено, default пропускается", "Верно: default выполняется только если ни один case не совпал", "default — необязательный блок, он не выполняется всегда"],
           isCode: false
         }]}
-      />
-      <JsPlayground
-        taskId={1}
-        functionName={'switchWeather'}
-        answers={['бери зонт', 'пошли загорать', 'сидим дома']}
-        defaultCode={'function switchWeather(weather){\n  \n}'}
-        title={'Задача: Прогноз на сегодня'}
-        examples={['switchWeather("rain") \n// Ожидаемый результат: бери зонт', 'switchWeather("sunny") \n// Ожидаемый результат: пошли загорать', 'switchWeather("default") \n// Ожидаемый результат: сидим дома']}
-        description={'В функции switchWeather вы получаете строку weather. Если в weather строка "rain", то выведите в консоль "бери зонт", если "sunny" - "пошли загорать", если что-то другое - "сидим дома". Реализуйте код, используя оператор switch.'}
       />
       <NavButtons
         prev={'/js/Operators'}
