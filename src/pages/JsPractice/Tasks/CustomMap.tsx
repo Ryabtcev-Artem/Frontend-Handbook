@@ -14,9 +14,10 @@ export default function CustomMap() {
   
 }`}
         testCases={[
-          { input: [[1,2,3], (x) => x*2], expected: [2,4,6], description: 'Удвоение' },
-          { input: [[1,2,3], (x) => x+1], expected: [2,3,4], description: 'Прибавить 1' },
-          { input: [[], (x) => x], expected: [], description: 'Пустой массив' },
+          { input: [[1,2,3], "(x) => x * 2"], expected: [2,4,6], description: 'Удвоение' },
+          { input: [[1,2,3], "(x) => x + 1"], expected: [2,3,4], description: 'Прибавить 1' },
+          { input: [[], "(x) => x"], expected: [], description: 'Пустой массив' },
+          { input: [[1,2,3], "function(x) { return x * x; }"], expected: [1,4,9], description: 'Квадрат (обычная функция)' },
         ]}
       />
       <NavButtons prev={'/js-practice/intersection'} next={'/js-practice/custom-reduce'} />

@@ -7,6 +7,13 @@
       font-family: Consolas;
       margin-right: 10px;
     }
+    &.self--check{
+      color: var(--color-text);
+      background-color: var(--bg-color-secondary);
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
   }
   &__blocks{
     &:last-child{

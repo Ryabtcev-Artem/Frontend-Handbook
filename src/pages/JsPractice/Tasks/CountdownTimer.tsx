@@ -7,7 +7,7 @@ export default function CountdownTimer() {
       <JsPlayground
         taskId={30}
         title="Таймер обратного отсчёта (Countdown Timer)"
-        description="Напишите функцию, которая реализует таймер обратного отсчёта до нуля. Функция принимает число секунд и вызывает callback каждую секунду."
+        description={`Реализуйте функцию countdownTimer(seconds, callback), которая каждую секунду вызывает callback с оставшимися секундами, начиная с переданного числа и до 1. Если seconds = 0, callback не вызывается.`}
         validationMode="function"
         functionName="countdownTimer"
         defaultCode={`function countdownTimer(seconds, callback) {
@@ -16,6 +16,8 @@ export default function CountdownTimer() {
         testCases={[
           { input: [3, () => {}], expected: undefined, description: '3 секунды' },
           { input: [0, () => {}], expected: undefined, description: '0 секунд' },
+          { input: [1, () => {}], expected: undefined, description: '1 секунда' },
+          { input: [5, () => {}], expected: undefined, description: '5 секунд' },
         ]}
       />
       <NavButtons prev={'/js-practice/is-power-of-two'} next={'/js-practice/custom-sort'} />

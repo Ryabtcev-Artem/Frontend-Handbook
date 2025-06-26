@@ -17,9 +17,17 @@ export default function FlattenArray() {
           { input: [[1,[2,[3]]]], expected: [1,2,3], description: 'Вложенность' },
           { input: [[1,2,3]], expected: [1,2,3], description: 'Без вложенности' },
           { input: [[]], expected: [], description: 'Пустой массив' },
+          { input: [[1,[2,3],4]], expected: [1,2,3,4], description: 'Одна вложенность внутри' },
+          { input: [[[1,2],[3,4]]], expected: [1,2,3,4], description: 'Два массива внутри' },
+          { input: [[1,[2,[3,[4,[5]]]]]], expected: [1,2,3,4,5], description: 'Глубокая вложенность' },
+          { input: [[[[[1]]]]], expected: [1], description: 'Многоуровневая вложенность одного элемента' },
+          { input: [[1,[],[2,[3,[]]],4]], expected: [1,2,3,4], description: 'Пустые массивы внутри' },
+          { input: [[1,'a',[true,[null,[undefined]]]]], expected: [1,'a',true,null,undefined], description: 'Разные типы значений' },
+          { input: [[[[[[]]]]]], expected: [], description: 'Только пустые массивы' },
+          { input: [[{a:1},[[2,3]],4]], expected: [{a:1},2,3,4], description: 'Объекты внутри массива' },
         ]}
       />
-      <NavButtons prev={'/js-practice/sum-chain'} next={'/js-practice/is-power-of-two'} />
+      <NavButtons prev={'/js-practice/curry'} next={'/js-practice/is-power-of-two'} />
     </section>
   )
 } 

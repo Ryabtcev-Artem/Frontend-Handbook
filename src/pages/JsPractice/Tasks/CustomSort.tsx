@@ -19,7 +19,7 @@ export default function CustomSort() {
           { input: [[]], expected: [], description: 'Пустой массив' },
         ]}
       />
-      <NavButtons prev={'/js-practice/countdown-timer'} next={'/js-practice/format-date'} />
+      <NavButtons prev={'/js-practice/countdown-timer'} next={'/js-practice/debounce-throttle'} />
     </section>
   )
 } 

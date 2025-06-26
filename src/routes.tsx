@@ -18,6 +18,9 @@ import Deploy from "./pages/Deploy/Deploy.tsx";
 import {DeployChildren} from "./pages/Deploy/DeployChildren.tsx";
 import JsPractice from "./pages/JsPractice/JsPractice.tsx";
 import {JsPracticeChildren} from "./pages/JsPractice/JsPracticeChildren.tsx";
+import ReactPractice from "./pages/ReactPractice/ReactPractice.tsx";
+import {ReactPracticeChildren} from "./pages/ReactPractice/ReactPracticeChildren.tsx";
+
 export const routes = [
   {
     path: '/',
@@ -71,5 +74,10 @@ export const routes = [
     path: '/js-practice',
     element: <JsPractice />,
     children: JsPracticeChildren,
-  }
+  },
+  {
+    path: '/react-practice',
+    element: <ReactPractice />,
+    children: ReactPracticeChildren,
+  },
 ]

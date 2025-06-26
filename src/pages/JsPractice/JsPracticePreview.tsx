@@ -1,8 +1,7 @@
 import {Link} from "react-router-dom";
 import auto from "../../images/JsPracticeImages/Preview/auto.svg"
 import hard from "../../images/JsPracticeImages/Preview/hard.svg"
-import insane from "../../images/JsPracticeImages/Preview/insane.svg"
-import insanedemon from "../../images/JsPracticeImages/Preview/insanedemon.webp"
+
 export default function JsPracticePreview() {
   return (
     <section className="chapter">
@@ -115,7 +114,7 @@ export default function JsPracticePreview() {
             <Link to="/js-practice/custom-reduce">Custom reduce</Link></div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.2</div>
-            <Link to="/js-practice/sum-chain">Sum chain</Link></div>
+            <Link to="/js-practice/curry">Curry</Link></div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.3</div>
             <Link to="/js-practice/flatten-array">Flatten array</Link></div>
@@ -130,79 +129,11 @@ export default function JsPracticePreview() {
             <Link to="/js-practice/custom-sort">Custom sort</Link></div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.7</div>
-            <Link to="/js-practice/format-date">Format date</Link></div>
+            <Link to="/js-practice/debounce-throttle">Debounce</Link>
+          </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">4.8</div>
-            <Link to="/js-practice/id-generator">Id generator</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">4.9</div>
-            <Link to="/js-practice/debounce-throttle">Debounce throttle</Link>
-          </div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">4.10</div>
             <Link to="/js-practice/deep-clone">Deep clone</Link></div>
-        </div>
-      </div>
-
-      <div className="chapter__blocks container">
-        <h3 className="chapter__block-title diff-title">Продвинутый уровень</h3>
-        <img
-          className={'diff-icon'}
-          src={insane}
-          alt=""
-          width="24"
-          height="24"
-          loading="lazy"
-        />
-        <div className="chapter__block">
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.1</div>
-            <Link to="/js-practice/hoisting-quiz">Hoisting quiz</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.2</div>
-            <Link to="/js-practice/bind-call-apply">Bind call apply</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.3</div>
-            <Link to="/js-practice/closure-task">Closure task</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.4</div>
-            <Link to="/js-practice/memoization">Memoization</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.5</div>
-            <Link to="/js-practice/once-function">Once function</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.6</div>
-            <Link to="/js-practice/async-loop">Async loop</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.7</div>
-            <Link to="/js-practice/retry-function">Retry function</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.8</div>
-            <Link to="/js-practice/promisify">Promisify</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.9</div>
-            <Link to="/js-practice/custom-promise-all">Custom promise all</Link>
-          </div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">5.10</div>
-            <Link to="/js-practice/event-emitter">Event emitter</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">6.1</div>
-            <Link to="/js-practice/limited-parallel">Limited parallel</Link>
-          </div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">6.2</div>
-            <Link to="/js-practice/custom-new">Custom new</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">6.3</div>
-            <Link to="/js-practice/custom-instanceof">Custom instanceof</Link>
-          </div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">6.4</div>
-            <Link to="/js-practice/promise-chain">Promise chain</Link></div>
-          <div className="chapter__topic">
-            <div className="chapter__topic-id">6.5</div>
-            <Link to="/js-practice/pipe-compose">Pipe compose</Link></div>
         </div>
       </div>
     </section>

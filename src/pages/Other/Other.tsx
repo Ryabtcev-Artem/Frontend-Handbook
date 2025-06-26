@@ -129,6 +129,22 @@ export default function Other() {
           </div>
           <span className={'other__name'}>JavaScript</span>
         </Link>
+        <Link
+          className={'other__page'}
+          to={'/react-practice'}
+        >
+          <div className="other__picture-container">
+            <img
+              className={'other__picture'}
+              src={react}
+              alt=""
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+          </div>
+          <span className={'other__name'}>React</span>
+        </Link>
       </div>
     </section>
   )
