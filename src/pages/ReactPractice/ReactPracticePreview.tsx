@@ -49,51 +49,56 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          5. Показ/скрытие блока:
+          5. Случайная цитата дня (useState + работа с массивом):
           <ul>
-            <li>Создайте булевое состояние (useState).</li>
-            <li>Добавьте кнопку для переключения состояния.</li>
-            <li>Отображайте или скрывайте блок в зависимости от состояния.</li>
+            <li>Создайте массив с несколькими вдохновляющими цитатами.</li>
+            <li>Используйте useState для хранения индекса текущей цитаты.</li>
+            <li>Добавьте кнопку "Показать случайную цитату", которая выбирает и отображает новую случайную цитату из массива (но не ту же самую подряд).</li>
+            <li>Добавьте кнопку "Скопировать", чтобы скопировать текст цитаты в буфер обмена (используйте <code>navigator.clipboard.writeText</code>).</li>
+            <li>Покажите уведомление "Скопировано!", когда цитата успешно скопирована.</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          6. Переключатель темы:
+          6. Передача пропсов и отображение:
           <ul>
-            <li>Используйте useState для хранения текущей темы (например, "light" или "dark").</li>
-            <li>Добавьте кнопку для смены темы.</li>
-            <li>Меняйте классы или стили в зависимости от выбранной темы.</li>
-          </ul>
-        </div>
-        <div className="chapter__topic self--check">
-          7. Форма валидации:
-          <ul>
-            <li>Используйте useState для хранения email и пароля.</li>
-            <li>Проверьте, что email содержит символ "@", а пароль — не короче 6 символов.</li>
-            <li>Выводите сообщения об ошибках под соответствующими полями.</li>
-          </ul>
-        </div>
-        <div className="chapter__topic self--check">
-          8. Список пользователей:
-          <ul>
-            <li>Создайте массив пользователей (мок-данные).</li>
-            <li>С помощью map отобразите карточки пользователей.</li>
-            <li>Обязательно используйте уникальный key для каждого элемента.</li>
-          </ul>
-        </div>
-        <div className="chapter__topic self--check">
-          9. Передача пропсов:
-          <ul>
-            <li>Создайте родительский компонент с данными.</li>
+            <li>Создайте родительский компонент с массивом данных (например, список книг).</li>
             <li>Передайте данные в дочерний компонент через props.</li>
-            <li>Отобразите полученные данные в дочернем компоненте.</li>
+            <li>В дочернем компоненте отобразите список с помощью map.</li>
+            <li>Добавьте уникальный key для каждого элемента.</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          10. Таймер:
+          7. Управление фокусом с useRef:
+          <ul>
+            <li>Создайте input и используйте useRef для получения ссылки на него.</li>
+            <li>Добавьте кнопку "Фокус", которая при нажатии ставит фокус на input.</li>
+            <li>Попробуйте реализовать автофокус при монтировании с помощью useEffect.</li>
+          </ul>
+        </div>
+        <div className="chapter__topic self--check">
+          8. Компонент "Счетчик с шагом":
+          <ul>
+            <li>Создайте компонент с числовым состоянием (useState).</li>
+            <li>Добавьте input для задания шага изменения счетчика.</li>
+            <li>Кнопки "+" и "-" должны увеличивать/уменьшать значение на указанный шаг.</li>
+          </ul>
+        </div>
+        <div className="chapter__topic self--check">
+          9. Управление формой и валидация:
+          <ul>
+            <li>Создайте форму с полями email и пароль (useState).</li>
+            <li>Проверьте, что email содержит символ "@", а пароль не короче 6 символов.</li>
+            <li>Показывайте сообщения об ошибках под соответствующими полями.</li>
+            <li>Добавьте кнопку "Показать/скрыть пароль".</li>
+          </ul>
+        </div>
+        <div className="chapter__topic self--check">
+          10. Таймер с кнопками управления:
           <ul>
             <li>Используйте useState для хранения количества секунд.</li>
             <li>С помощью useEffect и setInterval увеличивайте счетчик каждую секунду.</li>
-            <li>Не забудьте очистить интервал в cleanup-функции useEffect.</li>
+            <li>Добавьте кнопки "Старт", "Пауза" и "Сброс".</li>
+            <li>Не забудьте очищать интервал в cleanup-функции useEffect.</li>
           </ul>
         </div>
       </div>
@@ -109,15 +114,24 @@ export default function ReactPracticePreview() {
           loading="lazy"
         />
         <div className="chapter__topic self--check">
-          11. Фильтрация списка:
+          11. Фильтрация и поиск по списку:
           <ul>
             <li>Создайте массив элементов (например, пользователей или товаров).</li>
-            <li>Используйте useState для хранения строки фильтра.</li>
+            <li>Используйте useState для хранения строки поиска.</li>
             <li>Отображайте только те элементы, которые соответствуют фильтру (filter).</li>
+            <li>Добавьте надпись, если ничего не найдено.</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          12. Autocomplete:
+          12. Компонент с вкладками (Tabs):
+          <ul>
+            <li>Создайте несколько вкладок (например, "Профиль", "Настройки", "О нас").</li>
+            <li>Используйте useState для хранения активной вкладки.</li>
+            <li>Отображайте содержимое только выбранной вкладки.</li>
+          </ul>
+        </div>
+        <div className="chapter__topic self--check">
+          13. Autocomplete (автодополнение):
           <ul>
             <li>Создайте массив вариантов (например, городов).</li>
             <li>Используйте useState для хранения введённого значения.</li>
@@ -126,7 +140,7 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          13. Загрузка данных:
+          14. Загрузка данных с API:
           <ul>
             <li>Используйте useEffect для загрузки данных с помощью fetch (например, с JSONPlaceholder).</li>
             <li>Сохраняйте полученные данные в useState.</li>
@@ -135,38 +149,24 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          14. Вкладки (Tabs):
-          <ul>
-            <li>Создайте несколько вкладок (например, "Профиль", "Настройки").</li>
-            <li>Используйте useState для хранения активной вкладки.</li>
-            <li>Отображайте содержимое только активной вкладки.</li>
-          </ul>
-        </div>
-        <div className="chapter__topic self--check">
-          15. Фокус на input:
-          <ul>
-            <li>Создайте input и используйте useRef для получения ссылки на него.</li>
-            <li>С помощью useEffect установите фокус на input при монтировании компонента.</li>
-          </ul>
-        </div>
-        <div className="chapter__topic self--check">
-          16. Аккордеон:
+          15. Аккордеон:
           <ul>
             <li>Создайте список элементов-аккордеонов.</li>
             <li>Используйте useState для хранения id открытого элемента.</li>
             <li>Отображайте содержимое только для открытого элемента.</li>
+            <li>Добавьте анимацию появления/скрытия (по желанию).</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          17. useToggle:
+          16. Кастомный хук useToggle:
           <ul>
             <li>Создайте кастомный хук useToggle на основе useState.</li>
             <li>Хук должен возвращать текущее значение и функцию toggle для смены значения.</li>
-            <li>Используйте хук для переключения состояния (например, видимости).</li>
+            <li>Используйте хук для переключения состояния (например, видимости или темы).</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          18. Подъём состояния:
+          17. Подъём состояния (lifting state up):
           <ul>
             <li>Создайте родительский компонент с общим состоянием (например, текст).</li>
             <li>Добавьте два дочерних компонента с input, которые изменяют общее состояние через колбэки.</li>
@@ -174,7 +174,7 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          19. ThemeContext:
+          18. ThemeContext и useContext:
           <ul>
             <li>Создайте ThemeContext с помощью createContext.</li>
             <li>Используйте useContext для доступа к теме в дочерних компонентах.</li>
@@ -182,11 +182,20 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          20. useDebounce:
+          19. useDebounce для поиска:
           <ul>
             <li>Создайте кастомный хук useDebounce, который возвращает значение с задержкой.</li>
             <li>Используйте хук в input для задержки обработки ввода (например, для поиска или API-запроса).</li>
             <li>Проверьте, что значение обновляется только после паузы во вводе.</li>
+          </ul>
+        </div>
+        <div className="chapter__topic self--check">
+          20. Управление списком через useRef:
+          <ul>
+            <li>Создайте список задач и input для добавления новой задачи.</li>
+            <li>Используйте useRef для хранения ссылки на input и для хранения уникального id задачи.</li>
+            <li>Добавляйте задачи по нажатию Enter или кнопки.</li>
+            <li>Удаляйте задачи из списка.</li>
           </ul>
         </div>
       </div>
@@ -202,7 +211,7 @@ export default function ReactPracticePreview() {
           loading="lazy"
         />
         <div className="chapter__topic self--check">
-          21. useReducer форма:
+          21. Форма с useReducer:
           <ul>
             <li>Используйте useReducer для хранения значений email, password и checkbox.</li>
             <li>Обновляйте значения через dispatch.</li>
@@ -232,7 +241,7 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          25. Ленивая загрузка:
+          25. Ленивая загрузка компонентов:
           <ul>
             <li>Используйте React.lazy для динамического импорта компонента.</li>
             <li>Оборачивайте компонент в Suspense с fallback для отображения загрузки.</li>
@@ -240,7 +249,7 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          26. Оптимизация:
+          26. Оптимизация рендеринга:
           <ul>
             <li>Используйте React.memo для предотвращения лишних рендеров компонента.</li>
             <li>Примените useCallback для мемоизации функций, передаваемых в дочерние компоненты.</li>
@@ -255,15 +264,15 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          28. HOC:
+          28. HOC (Higher-Order Component):
           <ul>
-            <li>Создайте функцию-обёртку (Higher-Order Component) для компонента.</li>
+            <li>Создайте функцию-обёртку для компонента.</li>
             <li>HOC должен логировать пропсы в консоль при каждом рендере.</li>
             <li>Обверните любой компонент и проверьте работу HOC.</li>
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          29. Карусель:
+          29. Карусель изображений:
           <ul>
             <li>Создайте массив изображений или элементов.</li>
             <li>Используйте useState для хранения текущего индекса.</li>
@@ -272,7 +281,7 @@ export default function ReactPracticePreview() {
           </ul>
         </div>
         <div className="chapter__topic self--check">
-          30. Форма авторизации:
+          30. Форма авторизации с асинхронным запросом:
           <ul>
             <li>Создайте форму с email и паролем.</li>
             <li>Используйте useState для хранения значений.</li>
