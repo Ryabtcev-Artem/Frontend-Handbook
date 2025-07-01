@@ -6,6 +6,7 @@ import docker from '../../images/Other/Preview/docker.svg'
 import kubernetes from '../../images/Other/Preview/kubernetes.svg'
 import gitlab from '../../images/Other/Preview/gitlab.svg'
 import nginx from '../../images/Other/Preview/nginx.svg'
+import git from '../../images/Other/Preview/git.svg'
 import js from '../../images/Other/Preview/js.svg'
 import "./Other.scss"
 
@@ -67,6 +68,22 @@ export default function Other() {
             />
           </div>
           <span className={'other__name'}>TypeScript</span>
+        </Link>
+        <Link
+          className={'other__page'}
+          to={'/git'}
+        >
+          <div className="other__picture-container">
+            <img
+              className={'other__picture'}
+              src={git}
+              alt=""
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+          </div>
+          <span className={'other__name'}>Git</span>
         </Link>
         <Link
           className={'other__page'}

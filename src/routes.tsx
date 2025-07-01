@@ -20,6 +20,8 @@ import JsPractice from "./pages/JsPractice/JsPractice.tsx";
 import {JsPracticeChildren} from "./pages/JsPractice/JsPracticeChildren.tsx";
 import ReactPractice from "./pages/ReactPractice/ReactPractice.tsx";
 import {ReactPracticeChildren} from "./pages/ReactPractice/ReactPracticeChildren.tsx";
+import Git from "./pages/Git/Git.tsx";
+import {GitChildren} from "./pages/Git/GitChildren.tsx";
 
 export const routes = [
   {
@@ -80,4 +82,9 @@ export const routes = [
     element: <ReactPractice />,
     children: ReactPracticeChildren,
   },
+  {
+    path: '/git',
+    element: <Git />,
+    children: GitChildren,
+  }
 ]

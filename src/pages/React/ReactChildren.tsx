@@ -12,6 +12,7 @@ import UseEffect from "./UseEffect/UseEffect.tsx";
 import UseRef from "./UseRef/UseRef.tsx";
 import AdditionalHooks from "./AdditionalHooks/AdditionalHooks.tsx";
 import Forms from "./Forms/Forms.tsx";
+import VirtualDom from "./VirtualDom/VirtualDom.tsx";
 // import EventHandling from "./EventHandling/EventHandling.tsx";
 // import Lifecycle from "./Lifecycle/Lifecycle.tsx";
 // import Context from "./Context/Context.tsx";
@@ -26,6 +27,7 @@ import Forms from "./Forms/Forms.tsx";
 export const ReactChildren = [
   { path: '', element: <ReactPreview /> },
   { path: 'Intro', element: <Intro /> },
+  { path: 'VirtualDom', element: <VirtualDom /> },
   { path: 'Setup', element: <Setup /> },
   { path: 'Components', element: <Components /> },
   { path: 'Lifecycle', element: <Lifecycle /> },

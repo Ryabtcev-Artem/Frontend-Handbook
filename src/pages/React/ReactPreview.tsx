@@ -18,6 +18,10 @@ export default function ReactPreview() {
           </div>
           <div className="chapter__topic">
             <div className="chapter__topic-id">1.2</div>
+            <Link to="/react/VirtualDom">Virtual DOM</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">1.3</div>
             <Link to="/react/Setup">Настройка окружения и создание проекта</Link>
           </div>
         </div>

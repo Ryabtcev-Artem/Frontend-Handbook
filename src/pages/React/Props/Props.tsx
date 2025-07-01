@@ -1,5 +1,6 @@
 import VsCode from "../../../components/VsCode/VsCode.tsx";
 import NavButtons from "../../../components/NavButtons/NavButtons.tsx";
+import props from '../../../images/ReactImages/Props/props.png'
 export default function Props() {
 
   return (
@@ -91,16 +92,36 @@ function Alert({ children }: AlertProps) {
   <strong>Внимание!</strong> Это важно.
 </Alert>
 `}</VsCode>
-
+      <h3>Props передаются от родителя к ребёнку</h3>
+      <p>Props передаются между компонентами сверху вниз — от родительского компонента к дочернему.
+        То есть мы НЕ можем передавать props снизу вверх
+      </p>
+      <img
+        src={props}
+        alt=""
+        width=""
+        height=""
+        loading="lazy"
+      />
+      <p>Таким образом, родитель управляет тем, что отображает ребёнок,
+        передавая ему нужные данные через props. Сам дочерний компонент
+        не меняет эти данные — он их только читает и показывает.</p>
+      <p>Это важный принцип React — <em>однонаправленный поток данных</em>. Он упрощает понимание приложения и помогает избежать ошибок.
+      </p>
       <h2>Итого</h2>
       <ul>
-        <li><strong>Props</strong> — это способ передать данные от родителя к компоненту.</li>
+        <li>
+          <strong>Props</strong> — это способ передать данные от родителя к компоненту.
+        </li>
         <li>Они неизменяемы внутри компонента — только на чтение.</li>
         <li>С помощью props можно переиспользовать компоненты с разными данными.</li>
         <li>Можно передавать строки, числа, функции, компоненты и любые другие значения.</li>
         <li>Типизация props повышает надёжность кода и помогает IDE подсказывать корректные значения.</li>
       </ul>
-      <NavButtons prev={'/react/Lifecycle'} next={'/react/Rendering'} />
+      <NavButtons
+        prev={'/react/Lifecycle'}
+        next={'/react/Rendering'}
+      />
     </section>
   )
 }
