@@ -23,6 +23,14 @@ export default function GitPreview() {
             <div className="chapter__topic-id">1.3</div>
             <Link to="/git/Save">Сохранение файлов</Link>
           </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">1.3</div>
+            <Link to="/git/GoodCommit">Хороший Commit</Link>
+          </div>
+          <div className="chapter__topic">
+            <div className="chapter__topic-id">1.3</div>
+            <Link to="/git/Branches">Ветки</Link>
+          </div>
         </div>
       </div>
     </section>
